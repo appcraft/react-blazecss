@@ -1,0 +1,40 @@
+{
+  "name": "react-blazecss",
+  "version": "1.0.0",
+  "description": "react-blazecss React component",
+  "main": "lib/index.js",
+  "jsnext:main": "es6/index.js",
+  "files": [
+    "css",
+    "es6",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build",
+    "clean": "nwb clean",
+    "start": "nwb serve",
+    "test": "nwb test",
+    "test:watch": "nwb test --server"
+  },
+  "dependencies": {
+    "blaze": "^2.10.0"
+  },
+  "peerDependencies": {
+    "react": "0.14.x"
+  },
+  "devDependencies": {
+    "bem-cn": "^2.1.2",
+    "classnames": "^2.2.5",
+    "nwb": "0.9.x",
+    "react": "0.14.x",
+    "react-dom": "0.14.x"
+  },
+  "author": "",
+  "homepage": "",
+  "license": "MIT",
+  "repository": "",
+  "keywords": [
+    "react-component"
+  ]
+}
