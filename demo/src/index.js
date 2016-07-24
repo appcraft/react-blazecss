@@ -1,8 +1,9 @@
 import React from 'react'
 import {render} from 'react-dom'
 
-import {Badge, Button, ButtonGroup} from '../../src'
+import {Badge, Button, ButtonGroup, Nav, NavContent, NavItem} from '../../src'
 require('blaze/dist/blaze.min.css')
+require('blaze/dist/blaze.animations.min.css')
 
 
 let Demo = React.createClass({
@@ -10,6 +11,26 @@ let Demo = React.createClass({
     return <div>
       <h1>react-blazecss Demo</h1>
       <div className="c-text">
+        <div>
+          <h2>Nav</h2>
+          <div>
+            <h3>Normal</h3>
+            <Nav style={{width: 200}}>
+              <NavContent centered>My APP</NavContent>
+              <NavItem bStyle="success" active>Home</NavItem>
+              <NavItem>Menu</NavItem>
+              <NavItem bStyle="primary">Settings</NavItem>
+            </Nav>
+          </div>
+          <div>
+            <h3>Nav inline</h3>
+            <Nav inline shadow="higher" animate>
+              <NavItem bStyle="success" active>Home</NavItem>
+              <NavItem>Menu</NavItem>
+              <NavItem right bStyle="primary">Settings</NavItem>
+            </Nav>
+          </div>
+        </div>
         <div>
           <h2>Badges</h2>
           <div>
