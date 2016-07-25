@@ -91,12 +91,12 @@ code {
 
   .playground.playground--side-code .playgroundPreview {
     display: table-cell;
-    width: 50%;
+    width: 45%;
   }
 
   .playground.playground--side-code .playgroundCode {
     display: table-cell;
-    width: 50%;
+    width: 55%;
     vertical-align: top;
     border-top: 1px solid #ddd;
   }

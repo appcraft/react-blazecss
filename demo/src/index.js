@@ -1,6 +1,7 @@
 import React from 'react'
 import {render} from 'react-dom'
 
+import { AlertDemo } from './AlertDemo'
 import { BadgeDemo } from './BadgeDemo'
 import { ButtonDemo } from './ButtonDemo'
 import { CalendarDemo } from './CalendarDemo'
@@ -30,6 +31,7 @@ let Demo = React.createClass({
             and heavily inspired by <a className="c-link" href="https://react-bootstrap.github.io">ReactBoostrap</a>.<br />
             Support is pretty limited and expiramental for now, more components will be added soon.
           </p>
+          <AlertDemo />
           <BadgeDemo />
           <ButtonDemo />
           <CalendarDemo />
@@ -43,6 +45,7 @@ let Demo = React.createClass({
         <nav className="o-grid__cell o-grid__cell--width-20 nav fixed@large" style={{paddingTop: 50}}>
           <H3 size="medium">Components</H3>
           <ul className="c-list c-list--unstyled">
+            <li className="c-list__item "><a className="c-link" href="#alerts">Alerts</a></li>
             <li className="c-list__item "><a className="c-link" href="#badges">Badges</a></li>
             <li className="c-list__item "><a className="c-link" href="#buttons">Buttons</a></li>
             <li className="c-list__item "><a className="c-link" href="#calendars">Calendars</a></li>

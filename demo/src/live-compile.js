@@ -6,6 +6,7 @@ var babel = require('react-live-editor/node_modules/babel-core');
 
 // These do not use ES6 imports, because the evaluated code requires un-mangled
 // variable names.
+const { Alerts, Alert } = require('../../src/Alert')
 const { Badge } = require('../../src/Badge')
 const Button = require('../../src/Button').Button
 const ButtonGroup = require('../../src/ButtonGroup').ButtonGroup
