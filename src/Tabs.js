@@ -21,7 +21,7 @@ export class Tabs extends React.Component {
   }
 
   render(){
-    const { children, animate, bStyle, ...props } = this.props
+    const { children, animate, bStyle, activeKey, defaultActiveKey, ...props } = this.props
     
     var className = bem("c-tabs", {
       [bStyle]: true,
@@ -56,8 +56,8 @@ export class Tabs extends React.Component {
     const { activeKey=this.state.activeKey, children } = this.props
     
     return React.Children.map(children, el => {
-      const { title, disabled, children, ...props } = el.props
-      return <TabPane {...props} active={props.eventKey === activeKey}>{children}</TabPane>
+      const { title, disabled, children, eventKey, ...props } = el.props
+      return <TabPane {...props} active={eventKey === activeKey}>{children}</TabPane>
     })
   }
 }

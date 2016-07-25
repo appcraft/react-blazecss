@@ -66,8 +66,8 @@ export class CalendarDays extends React.Component {
     const buttons = []
 
     // Add previous days
-    for(var i=0; i<firstDayIndex; i++){
-      buttons.push(<button className={name}>{padDay(previousDayCount-(firstDayIndex-i-1))}</button>)
+    for(var i=1; i<=firstDayIndex; i++){
+      buttons.push(<button key={"prev-" + i} className={name}>{padDay(previousDayCount-(firstDayIndex-i))}</button>)
     }
 
     // Add current days
@@ -77,12 +77,12 @@ export class CalendarDays extends React.Component {
         "today": i === today,
         "selected": i === selected,
       })
-      buttons.push(<button className={className}>{padDay(i)}</button>)
+      buttons.push(<button key={"cur-" + i} className={className}>{padDay(i)}</button>)
     }
     
     // Add next days
     for(var i=0; ((firstDayIndex + dayCount + i)%7) != 0; i++){
-      buttons.push(<button className={name}>{padDay(i+1)}</button>)
+      buttons.push(<button key={"next-" + (i+1)} className={name}>{padDay(i+1)}</button>)
     }
 
     console.log("buttons", buttons)

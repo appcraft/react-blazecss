@@ -15,7 +15,7 @@ export class TabHeading extends React.Component {
   }
 
   render(){
-    const { children, active, disabled, ...props } = this.props
+    const { children, active, disabled, eventKey, ...props } = this.props
     
     var className = bem("c-tab-heading", {
       active, disabled

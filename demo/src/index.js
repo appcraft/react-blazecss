@@ -1,12 +1,12 @@
 import React from 'react'
 import {render} from 'react-dom'
 
+import { BadgeDemo } from './BadgeDemo'
 import { ButtonDemo } from './ButtonDemo'
 import { CalendarDemo } from './CalendarDemo'
 import { NavDemo } from './NavDemo'
 import { TabDemo } from './TabDemo'
-import { BadgeDemo } from './BadgeDemo'
-import {Badge} from '../../src'
+import { ToggleDemo } from './ToggleDemo'
 import {H1, H2, H3, H4, H5, H6, Button, Nav, NavContent, NavItem} from '../../src'
 
 require('blaze/dist/blaze.min.css')
@@ -28,6 +28,7 @@ let Demo = React.createClass({
             and heavily inspired by <a className="c-link" href="https://react-bootstrap.github.io">ReactBoostrap</a>.<br />
             Support is pretty limited and expiramental for now, more components will be added soon.
           </p>
+          <ToggleDemo />
           <BadgeDemo />
           <ButtonDemo />
           <CalendarDemo />
@@ -44,6 +45,7 @@ let Demo = React.createClass({
             <li className="c-list__item "><a className="c-link" href="#calendars">Calendars</a></li>
             <li className="c-list__item "><a className="c-link" href="#navs">Navs</a></li>
             <li className="c-list__item "><a className="c-link" href="#tabs">Tabs</a></li>
+            <li className="c-list__item "><a className="c-link" href="#toggle">Toggle</a></li>
           </ul>
         </nav>
       </div>

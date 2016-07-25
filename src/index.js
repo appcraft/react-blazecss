@@ -16,3 +16,5 @@ export * from './TabHeading'
 export * from './TabPane'
 export * from './Tabs'
 
+export * from './Toggle'
+

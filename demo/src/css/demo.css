@@ -11,7 +11,7 @@ code {
     padding: 0.4em 0;
 }
 
-.c-nav .c-nav__content {
+.c-nav--inline .c-nav__content {
   display: inline-block;
 }
 

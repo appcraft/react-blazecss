@@ -15,6 +15,7 @@ const NavContent = require('../../src/NavContent').NavContent
 const NavItem = require('../../src/NavItem').NavItem
 const Tabs = require('../../src/Tabs').Tabs
 const Tab = require('../../src/Tab').Tab
+const { Toggle } = require('../../src/Toggle')
 
 var selfCleaningTimeout = {
   componentDidUpdate: function componentDidUpdate() {
