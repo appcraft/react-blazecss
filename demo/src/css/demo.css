@@ -1,6 +1,18 @@
 
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
 .nav .c-list__item {
     padding: 0.4em 0;
+}
+
+.c-nav .c-nav__content {
+  display: inline-block;
 }
 
 .playground {

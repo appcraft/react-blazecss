@@ -9,6 +9,9 @@ export class TabDemo extends React.Component {
       <div id="tabs">
         <H2 size="large">Tabs</H2>
         <H3 size="medium">Uncontrolled tab example</H3>
+        <p className="c-paragraph">
+          Uncontrolled components have internal state and udpate automatically.
+        </p>
         <ReactPlayground codeText={`\
 export default (\n\
   <Tabs defaultActiveKey={1} animate bStyle="primary">\n\
@@ -20,6 +23,10 @@ export default (\n\
 `} />
 
         <H3 size="medium">Controlled tab example (activeKey={2})</H3>
+        <p className="c-paragraph">
+          Controlled tabs are pure UI components and rely on external code to update.
+          This component has activeKey set to 2 and won't change on clicks.
+        </p>
         <ReactPlayground codeText={`\
 export default (\n\
   <Tabs activeKey={2} animate bStyle="primary">\n\
