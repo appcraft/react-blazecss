@@ -16,26 +16,26 @@ export class BadgeDemo extends React.Component {
           Use any of the available blaze styles to quickly create a styled badge. Just modify the <code>bStyle</code> prop.
         </p>
         <ReactPlayground codeText={`\
-export default (\n\
-  <div>\n\
-    <Badge>Default</Badge>{" "}\n\
-    <Badge bStyle="primary">Primary</Badge>{" "}\n\
-    <Badge bStyle="secondary">Secondary</Badge>{" "}\n\
-    <Badge bStyle="success">Success</Badge>{" "}\n\
-    <Badge bStyle="error">Error</Badge>\n\
-  </div>\n\
+export default (
+  <div>
+    <Badge>Default</Badge>{" "}
+    <Badge bStyle="primary">Primary</Badge>{" "}
+    <Badge bStyle="secondary">Secondary</Badge>{" "}
+    <Badge bStyle="success">Success</Badge>{" "}
+    <Badge bStyle="error">Error</Badge>
+  </div>
 )\
 `} />
         <H3 size="medium">Rounded</H3>
         <ReactPlayground codeText={`\
-export default (\n\
-  <div>\n\
-    <Badge rounded>Default</Badge>{" "}\n\
-    <Badge bStyle="primary" rounded>Primary</Badge>{" "}\n\
-    <Badge bStyle="secondary" rounded>Secondary</Badge>{" "}\n\
-    <Badge bStyle="success" rounded>Success</Badge>{" "}\n\
-    <Badge bStyle="error" rounded>Error</Badge>\n\
-  </div>\n\
+export default (
+  <div>
+    <Badge rounded>Default</Badge>{" "}
+    <Badge bStyle="primary" rounded>Primary</Badge>{" "}
+    <Badge bStyle="secondary" rounded>Secondary</Badge>{" "}
+    <Badge bStyle="success" rounded>Success</Badge>{" "}
+    <Badge bStyle="error" rounded>Error</Badge>
+  </div>
 )\
 `} />
         <table className="c-table c-table--striped c-table--condensed">

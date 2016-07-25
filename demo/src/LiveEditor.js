@@ -31,15 +31,16 @@ var ReactPlayground = React.createClass({
   },
 
   render: function() {
-    const {code, showCode} = this.state;
+    const {code, showCode, showSideCode=true} = this.state;
 
+    const showEditor = showCode || showSideCode
 
-    return <div className="playground">
+    return <div className={"playground " + (showSideCode ? "playground--side-code" : "")}>
       <div className="playgroundPreview">
         <ComponentPreview code={code} />
       </div>
-      <div className="playgroundCode" style={{display: showCode ? 'block' : 'none'}}>
-        {showCode && <CodeMirrorEditor
+      <div className="playgroundCode" style={{display: showEditor ? undefined : "none"}}>
+        {showEditor && <CodeMirrorEditor
                       onChange={this.handleCodeChange}
                       className="playgroundStage"
                       codeText={code}

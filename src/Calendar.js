@@ -46,7 +46,7 @@ export class CalendarDayLabels extends React.Component {
     const { dayLabels } = this.props
     return (
       <CalendarContainer>
-        {dayLabels.map(day => <div className="c-calendar__day">{day}</div>)}
+        {dayLabels.map((day, idx) => <div key={idx} className="c-calendar__day">{day}</div>)}
       </CalendarContainer>
     )
   }

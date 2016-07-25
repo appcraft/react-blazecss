@@ -13,73 +13,73 @@ export class ButtonDemo extends React.Component {
           Use any of the available blaze styles to quickly create a styled button. Just modify the <code>bStyle</code> prop.
         </p>
         <ReactPlayground codeText={`\
-export default (\n\
-  <div>\n\
-    <Button>Default</Button>{" "}\n\
-    <Button bStyle="primary">Primary</Button>{" "}\n\
-    <Button bStyle="secondary">Secondary</Button>{" "}\n\
-    <Button bStyle="success">Success</Button>{" "}\n\
-    <Button bStyle="error">Error</Button>{" "}\n\
-    <Button bStyle="error" rounded ghost>Rounded Ghost Error</Button>{" "}\n\
-    <Button disabled>Disabled</Button>\n\
-  </div>\n\
+export default (
+  <div>
+    <Button>Default</Button>{" "}
+    <Button bStyle="primary">Primary</Button>{" "}
+    <Button bStyle="secondary">Secondary</Button>{" "}
+    <Button bStyle="success">Success</Button>{" "}
+    <Button bStyle="error">Error</Button>{" "}
+    <Button bStyle="error" rounded ghost>Rounded Ghost Error</Button>{" "}
+    <Button disabled>Disabled</Button>
+  </div>
 )\
 `} />
         <H3 size="medium">ButtonGroup</H3>
         <ReactPlayground codeText={`\
-export default (\n\
-  <ButtonGroup>\n\
-    <Button>Button</Button>\n\
-    <Button bStyle="primary">Button</Button>\n\
-    <Button bStyle="secondary">Button</Button>\n\
-    <Button bStyle="success">Button</Button>\n\
-    <Button bStyle="error">Button</Button>\n\
-  </ButtonGroup>\n\
+export default (
+  <ButtonGroup>
+    <Button>Button</Button>
+    <Button bStyle="primary">Button</Button>
+    <Button bStyle="secondary">Button</Button>
+    <Button bStyle="success">Button</Button>
+    <Button bStyle="error">Button</Button>
+  </ButtonGroup>
 )\
 `} />
         <H3 size="medium">Rounded</H3>
         <ReactPlayground codeText={`\
-export default (\n\
-  <ButtonGroup rounded>\n\
-    <Button>Button</Button>\n\
-    <Button bStyle="primary">Button</Button>\n\
-    <Button bStyle="secondary">Button</Button>\n\
-    <Button bStyle="success">Button</Button>\n\
-    <Button bStyle="error">Button</Button>\n\
-  </ButtonGroup>\n\
+export default (
+  <ButtonGroup rounded>
+    <Button>Button</Button>
+    <Button bStyle="primary">Button</Button>
+    <Button bStyle="secondary">Button</Button>
+    <Button bStyle="success">Button</Button>
+    <Button bStyle="error">Button</Button>
+  </ButtonGroup>
 )\
 `} />
         <H3 size="medium">ButtonGroup xsmall and ghost</H3>
         <ReactPlayground codeText={`\
-export default (\n\
-  <ButtonGroup size="xsmall" ghost>\n\
-    <Button>Button</Button>\n\
-    <Button bStyle="primary">Button</Button>\n\
-    <Button bStyle="secondary">Button</Button>\n\
-    <Button bStyle="success">Button</Button>\n\
-    <Button bStyle="error">Button</Button>\n\
-  </ButtonGroup>\n\
+export default (
+  <ButtonGroup size="xsmall" ghost>
+    <Button>Button</Button>
+    <Button bStyle="primary">Button</Button>
+    <Button bStyle="secondary">Button</Button>
+    <Button bStyle="success">Button</Button>
+    <Button bStyle="error">Button</Button>
+  </ButtonGroup>
 )\
 `} />
         <H3 size="medium">Sizes</H3>
         <ReactPlayground codeText={`\
-export default (\n\
-  <div>\n\
-    <Button size="xsmall">xsmall</Button>{" "}\n\
-    <Button size="small">small</Button>{" "}\n\
-    <Button size="medium">medium</Button>{" "}\n\
-    <Button size="large">large</Button>{" "}\n\
-    <Button size="xlarge">xlarge</Button>{" "}\n\
-    <Button size="super">super</Button>\n\
-  </div>\n\
+export default (
+  <div>
+    <Button size="xsmall">xsmall</Button>{" "}
+    <Button size="small">small</Button>{" "}
+    <Button size="medium">medium</Button>{" "}
+    <Button size="large">large</Button>{" "}
+    <Button size="xlarge">xlarge</Button>{" "}
+    <Button size="super">super</Button>
+  </div>
 )\
 `} />
         <H3 size="medium">Block</H3>
         <ReactPlayground codeText={`\
-export default (\n\
-  <div>\n\
-    <Button block>Block</Button>\n\
-  </div>\n\
+export default (
+  <div>
+    <Button block>Block</Button>
+  </div>
 )\
 `} />
 

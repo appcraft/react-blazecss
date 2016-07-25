@@ -16,6 +16,7 @@ const NavItem = require('../../src/NavItem').NavItem
 const Tabs = require('../../src/Tabs').Tabs
 const Tab = require('../../src/Tab').Tab
 const { Toggle } = require('../../src/Toggle')
+const { Tree, TreeItem, DataTree, DataTreeItem } = require('../../src/Tree')
 
 var selfCleaningTimeout = {
   componentDidUpdate: function componentDidUpdate() {

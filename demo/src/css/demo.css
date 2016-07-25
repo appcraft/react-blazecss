@@ -43,6 +43,21 @@ code {
 .playgroundCode {
     border: 1px solid #ddd;
     border-top: none;
+    background-color: #f8f5ec;
+    position: relative;
+    padding-top: 30px;
+}
+
+.playgroundStage:after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Live Code";
 }
 
 .playgroundCodeToggle {
@@ -57,12 +72,33 @@ code {
 
 .playgroundCodeToggle.open {
   background-color: #f8f5ec;
-    border-top-color: #f8f5ec;
+  border-top-color: #f8f5ec;
+}
+
+.playground.playground--side-code .playgroundCodeToggle {
+  display: none;
 }
 
 @media (min-width: 64em) { 
   .fixed\@large {
     position: fixed;
+  }
+
+  .playground.playground--side-code {
+    display: table;
+    width: 100%;
+  }
+
+  .playground.playground--side-code .playgroundPreview {
+    display: table-cell;
+    width: 50%;
+  }
+
+  .playground.playground--side-code .playgroundCode {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
   }
 }
 

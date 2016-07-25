@@ -18,21 +18,21 @@ function setYear(num) {
   alert("should set year to " + num)
 }
 
-export default (\n\
+export default (
 
-  <Calendar shadow="higher">\n\
+  <Calendar shadow="higher">
     <CalendarHeaderControl label="2016" 
                            onPrev={() => setYear(2015)} 
-                           onNext={() => setYear(2017)} />\n\
-    <CalendarHeaderControl label="January" />\n\
-    <CalendarDayLabels dayLabels={["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]} />\n\
-    <CalendarDays firstDayIndex={5}\n\
-                  dayCount={31}\n\
-                  previousDayCount={31}\n\
-                  today={14}\n\
-                  selected={21} />\n\
-    <Button bStyle="primary" block>Today</Button>\n\
-  </Calendar>\n\
+                           onNext={() => setYear(2017)} />
+    <CalendarHeaderControl label="January" />
+    <CalendarDayLabels dayLabels={["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]} />
+    <CalendarDays firstDayIndex={5}
+                  dayCount={31}
+                  previousDayCount={31}
+                  today={14}
+                  selected={21} />
+    <Button bStyle="primary" block>Today</Button>
+  </Calendar>
 )\
 `} />
       </div>

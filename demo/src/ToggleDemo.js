@@ -16,14 +16,14 @@ export class ToggleDemo extends React.Component {
           Use any of the available blaze styles to quickly create a styled toggle. Just modify the <code>bStyle</code> prop.
         </p>
         <ReactPlayground codeText={`\
-export default (\n\
-  <div>\n\
-    <Toggle defaultChecked={true}>Default</Toggle>\n\
-    <Toggle bStyle="primary" defaultChecked={true}>Primary</Toggle>\n\
-    <Toggle bStyle="secondary" defaultChecked={true}>Secondary</Toggle>\n\
-    <Toggle bStyle="success" defaultChecked={true}>Success</Toggle>\n\
-    <Toggle bStyle="error" defaultChecked={true}>Error</Toggle>\n\
-  </div>\n\
+export default (
+  <div>
+    <Toggle defaultChecked={true}>Default</Toggle>
+    <Toggle bStyle="primary" defaultChecked={true}>Primary</Toggle>
+    <Toggle bStyle="secondary" defaultChecked={true}>Secondary</Toggle>
+    <Toggle bStyle="success" defaultChecked={true}>Success</Toggle>
+    <Toggle bStyle="error" defaultChecked={true}>Error</Toggle>
+  </div>
 )\
 `} />
         <H3 size="medium">Controlled</H3>
@@ -31,32 +31,32 @@ export default (\n\
           Controlled components don't update automatically
         </p>
         <ReactPlayground codeText={`\
-class ControlledToggle extends React.Component {\n\
-\n\
-  constructor(props){\n\
-    super(props)\n\
-\n\
-    this.state = {\n\
-      checked: true\n\
-    }\n\
-    this.onChange = (e) => {\n\
-      this.setState({checked: !this.state.checked})\n\
-    }\n\
-  }\n\
-\n\
-  render(){\n\
-    const { checked } = this.state\n\
-    return (\n\
-      <div>\n\
-        <Toggle checked={checked} onChange={this.onChange}>Normal value</Toggle>\n\
-        <Toggle checked={!checked} onChange={this.onChange}>Inverted value</Toggle>\n\
-        <Toggle checked={true}>Always on</Toggle>\n\
-        <Toggle checked={false}>Always off</Toggle>\n\
-      </div>\n\
-    )\n\
-  }\n\
-}\n\
-\n\
+class ControlledToggle extends React.Component {
+
+  constructor(props){
+    super(props)
+
+    this.state = {
+      checked: true
+    }
+    this.onChange = (e) => {
+      this.setState({checked: !this.state.checked})
+    }
+  }
+
+  render(){
+    const { checked } = this.state
+    return (
+      <div>
+        <Toggle checked={checked} onChange={this.onChange}>Normal value</Toggle>
+        <Toggle checked={!checked} onChange={this.onChange}>Inverted value</Toggle>
+        <Toggle checked={true}>Always on</Toggle>
+        <Toggle checked={false}>Always off</Toggle>
+      </div>
+    )
+  }
+}
+
 export default <ControlledToggle />\
 `} />
         <H3 size="medium">Animate</H3>
@@ -64,12 +64,12 @@ export default <ControlledToggle />\
           The <code>animate</code> prop can be used to turn on animations
         </p>
         <ReactPlayground codeText={`\
-export default (\n\
-  <div>\n\
-    <Toggle bStyle="primary" animate>Animated toggle</Toggle>\n\
-    <Toggle bStyle="primary" animate="slow">slow...</Toggle>\n\
-    <Toggle bStyle="primary" animate="fast">...and fast !</Toggle>\n\
-  </div>\n\
+export default (
+  <div>
+    <Toggle bStyle="primary" animate>Animated toggle</Toggle>
+    <Toggle bStyle="primary" animate="slow">slow...</Toggle>
+    <Toggle bStyle="primary" animate="fast">...and fast !</Toggle>
+  </div>
 )\
 `} />
         <table className="c-table c-table--striped c-table--condensed">

@@ -7,6 +7,8 @@ import { CalendarDemo } from './CalendarDemo'
 import { NavDemo } from './NavDemo'
 import { TabDemo } from './TabDemo'
 import { ToggleDemo } from './ToggleDemo'
+import { TreeDemo } from './TreeDemo'
+
 import {H1, H2, H3, H4, H5, H6, Button, Nav, NavContent, NavItem} from '../../src'
 
 require('blaze/dist/blaze.min.css')
@@ -21,7 +23,7 @@ let Demo = React.createClass({
         <NavItem right bStyle="primary" href="https://github.com/appcraft/react-blazecss">github</NavItem>
       </Nav>
       <div className="o-container o-container--xlarge o-grid o-grid--wrap o-grid--top o-grid--small-full o-grid--medium-full">
-        <main className="o-grid__cell o-grid__cell--width-75"  style={{paddingTop: 70}}>
+        <main className="o-grid__cell o-grid__cell--width-80"  style={{paddingTop: 70}}>
           <H2 size="large">Introduction</H2>
           <p className="c-paragraph">
             ReactBlazeCSS is a set of React components using <a className="c-link" href="http://blazecss.com/">BlazeCSS</a> styles
@@ -34,10 +36,11 @@ let Demo = React.createClass({
           <NavDemo />
           <TabDemo />
           <ToggleDemo />
+          <TreeDemo />
           <br />
           <br />
         </main>
-        <nav className="o-grid__cell o-grid__cell--width-25 nav fixed@large" style={{paddingTop: 50}}>
+        <nav className="o-grid__cell o-grid__cell--width-20 nav fixed@large" style={{paddingTop: 50}}>
           <H3 size="medium">Components</H3>
           <ul className="c-list c-list--unstyled">
             <li className="c-list__item "><a className="c-link" href="#badges">Badges</a></li>
@@ -46,6 +49,7 @@ let Demo = React.createClass({
             <li className="c-list__item "><a className="c-link" href="#navs">Navs</a></li>
             <li className="c-list__item "><a className="c-link" href="#tabs">Tabs</a></li>
             <li className="c-list__item "><a className="c-link" href="#toggles">Toggles</a></li>
+            <li className="c-list__item "><a className="c-link" href="#trees">Trees</a></li>
           </ul>
         </nav>
       </div>

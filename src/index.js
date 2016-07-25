@@ -18,3 +18,5 @@ export * from './Tabs'
 
 export * from './Toggle'
 
+export * from './Tree'
+
