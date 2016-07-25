@@ -1,0 +1,56 @@
+
+.nav .c-list__item {
+    padding: 0.4em 0;
+}
+
+.playground {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.playgroundPreview {
+    position: relative;
+    padding: 45px 15px 15px;
+    margin: 0;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+}
+
+.playgroundPreview:after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Preview";
+}
+
+.playgroundCode {
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.playgroundCodeToggle {
+    position: absolute;
+    right: 0;
+    border: 1px solid #ddd;
+    border-top-color: white;
+    background-color: white;
+    margin-top: -1px;
+    padding: 8px;
+}
+
+.playgroundCodeToggle.open {
+  background-color: #f8f5ec;
+    border-top-color: #f8f5ec;
+}
+
+@media (min-width: 64em) { 
+  .fixed\@large {
+    position: fixed;
+  }
+}
+

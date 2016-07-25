@@ -11,7 +11,7 @@ import {H1, H2, H3, H4, H5, H6, Button} from '../../src'
 
 require('blaze/dist/blaze.min.css')
 require('blaze/dist/blaze.animations.min.css')
-require('./demo.css')
+require('./css/demo.css')
 
 let Demo = React.createClass({
   render() {
