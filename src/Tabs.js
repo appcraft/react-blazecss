@@ -5,6 +5,21 @@ import { TabHeading }  from './TabHeading'
 import { TabPane }  from './TabPane'
 
 export class Tabs extends React.Component {
+
+  constructor(props){
+    super(props)
+
+    this.state = {
+      activeKey: props.defaultActiveKey
+    }
+
+    this.onSelect = (eventKey) => {
+      this.setState({
+        activeKey: eventKey
+      })
+    }
+  }
+
   render(){
     const { children, animate, bStyle, ...props } = this.props
     
@@ -25,16 +40,20 @@ export class Tabs extends React.Component {
   }
   
   renderTabHeadings(){
-    const { activeKey, children } = this.props
+    const { activeKey=this.state.activeKey, children } = this.props
+    console.log("activeKey", activeKey)
     
     return React.Children.map(children, el => {
-      const { title, disabled, eventKey } = el.props
-      return <TabHeading disabled={disabled} eventKey={eventKey} active={eventKey === activeKey}>{title}</TabHeading>
+      const { title, disabled, eventKey, onSelect=this.onSelect } = el.props
+      return <TabHeading disabled={disabled} 
+                         eventKey={eventKey} 
+                         onSelect={onSelect}
+                         active={eventKey === activeKey}>{title}</TabHeading>
     })
   }
   
   renderTabPanes(){
-    const { children, activeKey } = this.props
+    const { activeKey=this.state.activeKey, children } = this.props
     
     return React.Children.map(children, el => {
       const { title, disabled, children, ...props } = el.props

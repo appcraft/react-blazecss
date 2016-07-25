@@ -2,6 +2,18 @@ import React from 'react'
 import { bem }  from './utils'
 
 export class TabHeading extends React.Component {
+
+  constructor(props){
+    super(props)
+    this.onClick = (evt) => {
+      evt.stopPropagation()
+      evt.preventDefault()
+
+      const { onSelect, eventKey, disabled } = this.props
+      if (onSelect && !disabled) onSelect(eventKey)
+    }
+  }
+
   render(){
     const { children, active, disabled, ...props } = this.props
     
@@ -9,7 +21,7 @@ export class TabHeading extends React.Component {
       active, disabled
     })
     
-    return <div {...props} className={className}>{children}</div>
+    return <div onClick={this.onClick} {...props} className={className}>{children}</div>
   }
 }
 
