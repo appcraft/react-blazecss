@@ -8,7 +8,7 @@ export class NavDemo extends React.Component {
     return (
       <div id="navs">
         <H2 size="large">Nav</H2>
-        <H3 size="medium">Normal</H3>        
+        <H3 size="medium">Normal</H3>
         <ReactPlayground codeText={`\
 export default (\n\
   <Nav style={{width: 200}}>\n\

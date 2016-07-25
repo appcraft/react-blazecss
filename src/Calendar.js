@@ -12,13 +12,30 @@ export class CalendarContainer extends React.Component {
 }
 
 export class CalendarHeaderControl extends React.Component {
+
+  constructor(props){
+    super(props)
+
+    this.onPrev = (e) => {
+      e.preventDefault()
+      const { onPrev } = this.props
+      if (onPrev) onPrev()
+    }
+
+    this.onNext = (e) => {
+      e.preventDefault()
+      const { onNext } = this.props
+      if (onNext) onNext()
+    }
+  }
+
   render(){
     const { onPrev, onNext, label } = this.props
     return (
       <CalendarContainer>
-        <button className="c-calendar__control">‹</button>
+        <button className="c-calendar__control" onClick={this.onPrev}>‹</button>
         <div className="c-calendar__header">{label}</div>
-        <button className="c-calendar__control">›</button>
+        <button className="c-calendar__control" onClick={this.onNext}>›</button>
       </CalendarContainer>
     )
   }

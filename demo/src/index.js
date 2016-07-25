@@ -24,6 +24,8 @@ let Demo = React.createClass({
           <CalendarDemo />
           <NavDemo />
           <TabDemo />
+          <br />
+          <br />
         </main>
         <nav className="o-grid__cell o-grid__cell--width-25 nav fixed@large">
           <H3 size="medium">Components</H3>
