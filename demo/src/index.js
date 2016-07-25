@@ -25,7 +25,7 @@ let Demo = React.createClass({
           <NavDemo />
           <TabDemo />
         </main>
-        <nav className="o-grid__cell o-grid__cell--width-25 nav">
+        <nav className="o-grid__cell o-grid__cell--width-25 nav fixed@large">
           <H3 size="medium">Components</H3>
           <ul className="c-list c-list--unstyled">
             <li className="c-list__item "><a className="c-link" href="#badges">Badges</a></li>

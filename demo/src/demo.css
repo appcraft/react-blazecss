@@ -2,3 +2,9 @@
 .nav .c-list__item {
     padding: 0.4em 0;
 }
+
+@media (min-width: 64em) { 
+  .fixed\@large {
+    position: fixed;
+  }
+}
