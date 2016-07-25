@@ -5,6 +5,8 @@ export * from './ButtonGroup'
 
 export * from './Calendar'
 
+export * from './Heading'
+
 export * from './Nav'
 export * from './NavContent'
 export * from './NavItem'

@@ -5,18 +5,46 @@ import {Badge, Button, ButtonGroup} from '../../src'
 import {Calendar, CalendarHeaderControl, CalendarDays, CalendarDayLabels} from '../../src'
 import {Nav, NavContent, NavItem} from '../../src'
 import {Tabs, Tab} from '../../src'
+import {H1, H2, H3, H4, H5, H6} from '../../src'
 
 require('blaze/dist/blaze.min.css')
 require('blaze/dist/blaze.animations.min.css')
+require('./demo.css')
 
+let Demo = React.createClass({
+  render() {
+    return <div className="c-text">
+      <div className="o-container o-container--xlarge o-grid o-grid--wrap o-grid--top o-grid--small-full o-grid--medium-full">
+        <H1>ReactBlazeCSS Demo</H1>
+        <main className="o-grid__cell o-grid__cell--width-75">
+          <BadgeDemo />
+          <ButtonDemo />
+          <NavDemo />
+          <TabDemo />
+          <CalendarDemo />
+        </main>
+        <nav className="o-grid__cell o-grid__cell--width-25 nav">
+          <H4>Components</H4>
+          <ul className="c-list c-list--unstyled">
+            <li className="c-list__item "><a className="c-link" href="#badges">Badges</a></li>
+            <li className="c-list__item "><a className="c-link" href="#buttons">Buttons</a></li>
+            <li className="c-list__item "><a className="c-link" href="#calendars">Calendars</a></li>
+            <li className="c-list__item "><a className="c-link" href="#navs">Navs</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+    </div>
+  }
+})
 
 class CalendarDemo extends React.Component {
   render(){
     return (
-      <div>
-        <h2>Calendar</h2>
+      <div id="calendars">
+        <H2>Calendar</H2>
         <div>
-          <h3>Calendar (controlled)</h3>
+          <H3>Calendar (controlled)</H3>
           <Calendar shadow="higher">
             <CalendarHeaderControl label="2016" />
             <CalendarHeaderControl label="January" />
@@ -37,10 +65,10 @@ class CalendarDemo extends React.Component {
 class TabDemo extends React.Component {
   render(){
     return (
-      <div>
-        <h2>Tabs</h2>
+      <div id="tabs">
+        <H2>Tabs</H2>
         <div>
-          <h3>Uncontrolled tab example</h3>
+          <H3>Uncontrolled tab example</H3>
           <Tabs defaultActiveKey={1} animate bStyle="primary">
             <Tab eventKey={1} title="Tab 1">Tab 1 content</Tab>
             <Tab eventKey={2} title="Tab 2">Tab 2 content</Tab>
@@ -48,7 +76,7 @@ class TabDemo extends React.Component {
           </Tabs>
         </div>
         <div>
-          <h3>Controlled tab example (activeKey={2})</h3>
+          <H3>Controlled tab example (activeKey={2})</H3>
           <Tabs activeKey={2} animate bStyle="primary">
             <Tab eventKey={1} title="Tab 1">Tab 1 content</Tab>
             <Tab eventKey={2} title="Tab 2">Tab 2 content</Tab>
@@ -63,10 +91,10 @@ class TabDemo extends React.Component {
 class NavDemo extends React.Component {
   render(){
     return (
-      <div>
-        <h2>Nav</h2>
+      <div id="navs">
+        <H2>Nav</H2>
         <div>
-          <h3>Normal</h3>
+          <H3>Normal</H3>
           <Nav style={{width: 200}}>
             <NavContent centered>My APP</NavContent>
             <NavItem bStyle="success" active>Home</NavItem>
@@ -75,7 +103,16 @@ class NavDemo extends React.Component {
           </Nav>
         </div>
         <div>
-          <h3>Nav inline</h3>
+          <H3>Light</H3>
+          <Nav style={{width: 200}} light>
+            <NavContent centered>My APP</NavContent>
+            <NavItem bStyle="success" active>Home</NavItem>
+            <NavItem>Menu</NavItem>
+            <NavItem bStyle="primary">Settings</NavItem>
+          </Nav>
+        </div>
+        <div>
+          <H3>Nav inline</H3>
           <Nav inline shadow="higher" animate>
           {/*<Nav inline shadow="higher" animate position="top" fixed>*/}
             <NavItem bStyle="success" active>Home</NavItem>
@@ -91,19 +128,23 @@ class NavDemo extends React.Component {
 class BadgeDemo extends React.Component {
   render(){
     return (
-      <div>
-        <h2>Badges</h2>
+      <div id="badges">
+        <H2>Badges</H2>
         <div>
-          <h3>Badges</h3>
-          <Badge>Badge</Badge>
-          <Badge bStyle="primary">Primary</Badge>
-          <Badge bStyle="secondary">Secondary</Badge>
-          <Badge bStyle="success">Success</Badge>
+          <H3>Normal</H3>
+          <Badge>Default</Badge>{" "}
+          <Badge bStyle="primary">Primary</Badge>{" "}
+          <Badge bStyle="secondary">Secondary</Badge>{" "}
+          <Badge bStyle="success">Success</Badge>{" "}
           <Badge bStyle="error">Error</Badge>
         </div>
         <div>
-          <h3>Rounded</h3>
-          <Badge bStyle="error" rounded>Rounded</Badge>
+          <H3>Rounded</H3>
+          <Badge rounded>Default</Badge>{" "}
+          <Badge bStyle="primary" rounded>Primary</Badge>{" "}
+          <Badge bStyle="secondary" rounded>Secondary</Badge>{" "}
+          <Badge bStyle="success" rounded>Success</Badge>{" "}
+          <Badge bStyle="error" rounded>Error</Badge>
         </div>
       </div>
     )
@@ -113,27 +154,29 @@ class BadgeDemo extends React.Component {
 class ButtonDemo extends React.Component {
   render(){
     return (
-      <div>
-        <h2>Buttons</h2>
+      <div id="buttons">
+        <H2>Buttons</H2>
         <div>
-          <Button>Button</Button>
-          <Button bStyle="primary">Button</Button>
-          <Button bStyle="secondary">Button</Button>
-          <Button bStyle="success">Button</Button>
-          <Button bStyle="error">Button</Button>
-          <Button bStyle="error" rounded ghost>Button</Button>
+          <Button>Button</Button>{" "}
+          <Button bStyle="primary">Button</Button>{" "}
+          <Button bStyle="secondary">Button</Button>{" "}
+          <Button bStyle="success">Button</Button>{" "}
+          <Button bStyle="error">Button</Button>{" "}
+          <Button bStyle="error" rounded ghost>Button</Button>{" "}
           <Button disabled>Disabled</Button>
         </div>
-        <ButtonGroup>
-          <Button>Button</Button>
-          <Button bStyle="primary">Button</Button>
-          <Button bStyle="secondary">Button</Button>
-          <Button bStyle="success">Button</Button>
-          <Button bStyle="error">Button</Button>
-        </ButtonGroup>
-        <br />
         <div>
-          <h3>Rounded</h3>
+          <H3>ButtonGroup</H3>
+          <ButtonGroup>
+            <Button>Button</Button>
+            <Button bStyle="primary">Button</Button>
+            <Button bStyle="secondary">Button</Button>
+            <Button bStyle="success">Button</Button>
+            <Button bStyle="error">Button</Button>
+          </ButtonGroup>
+        </div>
+        <div>
+          <H3>Rounded</H3>
           <ButtonGroup rounded>
             <Button>Button</Button>
             <Button bStyle="primary">Button</Button>
@@ -143,7 +186,7 @@ class ButtonDemo extends React.Component {
           </ButtonGroup>
         </div>
         <div>
-          <h3>ButtonGroup xsmall and ghost</h3>
+          <H3>ButtonGroup xsmall and ghost</H3>
           <ButtonGroup size="xsmall" ghost>
             <Button>Button</Button>
             <Button bStyle="primary">Button</Button>
@@ -153,35 +196,21 @@ class ButtonDemo extends React.Component {
           </ButtonGroup>
         </div>
         <div>
-          <h3>Sizes</h3>
-          <Button size="xsmall">Button</Button>
-          <Button size="small">Button</Button>
-          <Button size="medium">Button</Button>
-          <Button size="large">Button</Button>
+          <H3>Sizes</H3>
+          <Button size="xsmall">Button</Button>{" "}
+          <Button size="small">Button</Button>{" "}
+          <Button size="medium">Button</Button>{" "}
+          <Button size="large">Button</Button>{" "}
+          <Button size="xlarge">Button</Button>{" "}
           <Button size="super">Button</Button>
         </div>
         <div>
-          <h3>Block</h3>
+          <H3>Block</H3>
           <Button block>Button</Button>
         </div>
       </div>
     )
   }
 }
-
-let Demo = React.createClass({
-  render() {
-    return <div>
-      <h1>ReactBlazeCSS Demo</h1>
-      <div className="c-text">
-        <CalendarDemo />
-        <TabDemo />
-        <NavDemo />
-        <BadgeDemo />
-        <ButtonDemo />
-      </div>
-    </div>
-  }
-})
 
 render(<Demo/>, document.querySelector('#demo'))

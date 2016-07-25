@@ -3,13 +3,12 @@ import { bem }  from './utils'
 
 export class Nav extends React.Component {
   render(){
-    const { children, inline, shadow, animate, position, fixed, ...props } = this.props
+    const { children, inline, shadow, animate, light, position, fixed, ...props } = this.props
     
     var className = bem("c-nav", {
-      inline,
+      inline, fixed, light,
       [shadow]: true,
       [position]: true,
-      fixed,
     }, {
       "a-nav": animate,
     })
