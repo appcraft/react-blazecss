@@ -84,7 +84,7 @@ export default (\n\
 `} />
 
         <H3 size="medium">Props</H3>
-        <table className="c-table c-table--striped">
+        <table className="c-table c-table--striped c-table--condensed">
           <caption className="c-table__caption">Button props</caption>
           <thead className="c-table__head">
           <tr className="c-table__row c-table__row--heading">
@@ -103,7 +103,7 @@ export default (\n\
             </tr>
             <tr className="c-table__row">
               <td className="c-table__cell" style={{maxWidth: 90}}>bStyle</td>
-              <td className="c-table__cell"><span>one of <code>"primary"</code>, <code>"secondary"</code>, <code>"success"</code>, <code>"error"</code></span></td>
+              <td className="c-table__cell"><span>empty or one of <code>"primary"</code>, <code>"secondary"</code>, <code>"success"</code>, <code>"error"</code></span></td>
               <td className="c-table__cell" style={{maxWidth: 90}}></td>
               <td className="c-table__cell">BlazeCSS style</td>
             </tr>
@@ -121,7 +121,7 @@ export default (\n\
             </tr>
             <tr className="c-table__row">
               <td className="c-table__cell" style={{maxWidth: 90}}>size</td>
-              <td className="c-table__cell"><span>one of <code>"xsmall"</code>, <code>"small"</code>, <code>"medium"</code>, <code>"large"</code>, <code>"xlarge"</code>, <code>"super"</code></span></td>
+              <td className="c-table__cell"><span>empty or one of <code>"xsmall"</code>, <code>"small"</code>, <code>"medium"</code>, <code>"large"</code>, <code>"xlarge"</code>, <code>"super"</code></span></td>
               <td className="c-table__cell" style={{maxWidth: 90}}>medium</td>
               <td className="c-table__cell">BlazeCSS size</td>
             </tr>

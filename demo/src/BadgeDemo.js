@@ -38,7 +38,7 @@ export default (\n\
   </div>\n\
 )\
 `} />
-        <table className="c-table c-table--striped">
+        <table className="c-table c-table--striped c-table--condensed">
           <caption className="c-table__caption">Badge props</caption>
           <thead className="c-table__head">
           <tr className="c-table__row c-table__row--heading">
@@ -51,7 +51,7 @@ export default (\n\
           <tbody className="c-table__body">
             <tr className="c-table__row">
               <td className="c-table__cell" style={{maxWidth: 90}}>bStyle</td>
-              <td className="c-table__cell"><span>one of <code>"primary"</code>, <code>"secondary"</code>, <code>"success"</code>, <code>"error"</code></span></td>
+              <td className="c-table__cell"><span>empty or one of <code>"primary"</code>, <code>"secondary"</code>, <code>"success"</code>, <code>"error"</code></span></td>
               <td className="c-table__cell" style={{maxWidth: 90}}></td>
               <td className="c-table__cell">BlazeCSS style</td>
             </tr>
