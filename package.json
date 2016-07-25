@@ -13,6 +13,7 @@
   "scripts": {
     "build": "nwb build",
     "clean": "nwb clean",
+    "gh-pages": "git subtree push --prefix demo/dist origin gh-pages",
     "start": "nwb serve",
     "test": "nwb test",
     "test:watch": "nwb test --server"
@@ -24,7 +25,6 @@
     "react": "0.14.x"
   },
   "devDependencies": {
-    "bem-cn": "^2.1.2",
     "classnames": "^2.2.5",
     "nwb": "0.9.x",
     "react": "0.14.x",
