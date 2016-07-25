@@ -7,7 +7,7 @@ export class ToggleDemo extends React.Component {
   render(){
     return (
       <div id="toggles">
-        <H2 size="large">Toggle</H2>
+        <H2 size="large">Toggles</H2>
         <p className="p-class">
           Prettier checkboxes...
         </p>

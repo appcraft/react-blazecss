@@ -7,7 +7,7 @@ export class CalendarDemo extends React.Component {
   render(){
     return (
       <div id="calendars">
-        <H2 size="large">Calendar</H2>
+        <H2 size="large">Calendars</H2>
         <H3 size="medium">Calendar (controlled)</H3>
         <p className="c-paragraph">
           ReactBlazeCSS's calendar is a pure UI component. It won't manage any state, but stays 100% lightweight.

@@ -45,7 +45,7 @@ let Demo = React.createClass({
             <li className="c-list__item "><a className="c-link" href="#calendars">Calendars</a></li>
             <li className="c-list__item "><a className="c-link" href="#navs">Navs</a></li>
             <li className="c-list__item "><a className="c-link" href="#tabs">Tabs</a></li>
-            <li className="c-list__item "><a className="c-link" href="#toggle">Toggle</a></li>
+            <li className="c-list__item "><a className="c-link" href="#toggles">Toggles</a></li>
           </ul>
         </nav>
       </div>

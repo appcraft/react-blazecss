@@ -7,7 +7,7 @@ export class NavDemo extends React.Component {
   render(){
     return (
       <div id="navs">
-        <H2 size="large">Nav</H2>
+        <H2 size="large">Navs</H2>
         <H3 size="medium">Normal</H3>
         <ReactPlayground codeText={`\
 export default (\n\
