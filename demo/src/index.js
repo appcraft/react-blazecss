@@ -28,12 +28,12 @@ let Demo = React.createClass({
             and heavily inspired by <a className="c-link" href="https://react-bootstrap.github.io">ReactBoostrap</a>.<br />
             Support is pretty limited and expiramental for now, more components will be added soon.
           </p>
-          <ToggleDemo />
           <BadgeDemo />
           <ButtonDemo />
           <CalendarDemo />
           <NavDemo />
           <TabDemo />
+          <ToggleDemo />
           <br />
           <br />
         </main>
