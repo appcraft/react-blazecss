@@ -2,12 +2,37 @@ import React from 'react'
 import {render} from 'react-dom'
 
 import {Badge, Button, ButtonGroup} from '../../src'
+import {Calendar, CalendarHeaderControl, CalendarDays, CalendarDayLabels} from '../../src'
 import {Nav, NavContent, NavItem} from '../../src'
 import {Tabs, Tab} from '../../src'
 
 require('blaze/dist/blaze.min.css')
 require('blaze/dist/blaze.animations.min.css')
 
+
+class CalendarDemo extends React.Component {
+  render(){
+    return (
+      <div>
+        <h2>Calendar</h2>
+        <div>
+          <h3>Calendar (controlled)</h3>
+          <Calendar shadow="higher">
+            <CalendarHeaderControl label="2016" />
+            <CalendarHeaderControl label="January" />
+            <CalendarDayLabels dayLabels={["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]} />
+            <CalendarDays firstDayIndex={5}
+                          dayCount={31}
+                          previousDayCount={31}
+                          today={14}
+                          selected={21} />
+            <Button bStyle="primary" block>Today</Button>
+          </Calendar>
+        </div>
+      </div>
+    )
+  }
+}
 
 class TabDemo extends React.Component {
   render(){
@@ -69,11 +94,15 @@ class BadgeDemo extends React.Component {
       <div>
         <h2>Badges</h2>
         <div>
+          <h3>Badges</h3>
           <Badge>Badge</Badge>
           <Badge bStyle="primary">Primary</Badge>
           <Badge bStyle="secondary">Secondary</Badge>
           <Badge bStyle="success">Success</Badge>
           <Badge bStyle="error">Error</Badge>
+        </div>
+        <div>
+          <h3>Rounded</h3>
           <Badge bStyle="error" rounded>Rounded</Badge>
         </div>
       </div>
@@ -145,6 +174,7 @@ let Demo = React.createClass({
     return <div>
       <h1>ReactBlazeCSS Demo</h1>
       <div className="c-text">
+        <CalendarDemo />
         <TabDemo />
         <NavDemo />
         <BadgeDemo />
