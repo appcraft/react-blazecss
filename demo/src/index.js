@@ -19,9 +19,9 @@ let Demo = React.createClass({
         <main className="o-grid__cell o-grid__cell--width-75">
           <BadgeDemo />
           <ButtonDemo />
+          <CalendarDemo />
           <NavDemo />
           <TabDemo />
-          <CalendarDemo />
         </main>
         <nav className="o-grid__cell o-grid__cell--width-25 nav">
           <H4>Components</H4>
@@ -30,6 +30,7 @@ let Demo = React.createClass({
             <li className="c-list__item "><a className="c-link" href="#buttons">Buttons</a></li>
             <li className="c-list__item "><a className="c-link" href="#calendars">Calendars</a></li>
             <li className="c-list__item "><a className="c-link" href="#navs">Navs</a></li>
+            <li className="c-list__item "><a className="c-link" href="#tabs">Tabs</a></li>
           </ul>
         </nav>
       </div>
