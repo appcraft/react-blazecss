@@ -1,18 +1,15 @@
 import React from 'react'
-import {Badge} from '../../src'
 import {H2, H3} from '../../src'
 
 import ReactPlayground from './LiveEditor'
-
 
 export class BadgeDemo extends React.Component {
   render(){
     return (
       <div id="badges">
         <H2 size="large">Badges</H2>
-        <div>
-          <H3 size="medium">Normal</H3>
-          <ReactPlayground codeText={`\
+        <H3 size="medium">Normal</H3>
+        <ReactPlayground codeText={`\
 export default (\n\
   <div>\n\
     <Badge>Default</Badge>{" "}\n\
@@ -23,10 +20,8 @@ export default (\n\
   </div>\n\
 )\
 `} />
-        </div>
-        <div>
-          <H3 size="medium">Rounded</H3>
-          <ReactPlayground codeText={`\
+        <H3 size="medium">Rounded</H3>
+        <ReactPlayground codeText={`\
 export default (\n\
   <div>\n\
     <Badge rounded>Default</Badge>{" "}\n\
@@ -37,7 +32,6 @@ export default (\n\
   </div>\n\
 )\
 `} />
-        </div>
       </div>
     )
   }

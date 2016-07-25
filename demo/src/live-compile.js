@@ -6,7 +6,15 @@ var babel = require('react-live-editor/node_modules/babel-core');
 
 // These do not use ES6 imports, because the evaluated code requires un-mangled
 // variable names.
-const Badge = require('../../src/Badge').Badge
+const { Badge } = require('../../src/Badge')
+const Button = require('../../src/Button').Button
+const ButtonGroup = require('../../src/ButtonGroup').ButtonGroup
+const { Calendar, CalendarHeaderControl, CalendarDays, CalendarDayLabels } = require('../../src/Calendar')
+const Nav = require('../../src/Nav').Nav
+const NavContent = require('../../src/NavContent').NavContent
+const NavItem = require('../../src/NavItem').NavItem
+const Tabs = require('../../src/Tabs').Tabs
+const Tab = require('../../src/Tab').Tab
 
 var selfCleaningTimeout = {
   componentDidUpdate: function componentDidUpdate() {
