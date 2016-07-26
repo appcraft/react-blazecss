@@ -13,7 +13,7 @@ import { TagDemo } from './TagDemo'
 import { ToggleDemo } from './ToggleDemo'
 import { TreeDemo } from './TreeDemo'
 
-import {H1, H2, H3, H4, H5, H6, UL, LI, Button, Nav, NavContent, NavItem} from '../../src'
+import {H1, H2, H3, H4, H5, H6, UL, LI, P, Button, Nav, NavContent, NavItem} from '../../src'
 
 require('blaze/dist/blaze.min.css')
 require('blaze/dist/blaze.animations.min.css')
@@ -27,13 +27,13 @@ let Demo = React.createClass({
         <NavItem right bStyle="primary" href="https://github.com/appcraft/react-blazecss">github</NavItem>
       </Nav>
       <div className="o-container o-container--xlarge o-grid o-grid--wrap o-grid--top o-grid--small-full o-grid--medium-full">
-        <main className="o-grid__cell o-grid__cell--width-80"  style={{paddingTop: 70}}>
+        <main className="o-grid__cell o-grid__cell--width-80"  style={{paddingTop: 50}}>
           <H2 size="large">Introduction</H2>
-          <p className="c-paragraph">
+          <P>
             ReactBlazeCSS is a set of React components using <a className="c-link" href="http://blazecss.com/">BlazeCSS</a> styles
             and heavily inspired by <a className="c-link" href="https://react-bootstrap.github.io">ReactBoostrap</a>.<br />
             Support is pretty limited and expiramental for now, more components will be added soon.
-          </p>
+          </P>
           <AlertDemo />
           <BadgeDemo />
           <ButtonDemo />

@@ -1,5 +1,5 @@
 import React from 'react'
-import {H2, H3} from '../../src'
+import {H2, H3, P} from '../../src'
 
 import ReactPlayground from './components/LiveEditor'
 import { PropsTable, Props } from './components/PropsTable'
@@ -9,13 +9,13 @@ export class TagDemo extends React.Component {
     return (
       <div id="tags">
         <H2 size="large">Tags</H2>
-        <p className="c-paragraph">
+        <P>
           WIP, will add tag input soon
-        </p>
+        </P>
         <H3 size="medium">Styling</H3>
-        <p className="c-paragraph">
+        <P>
           Tags are built using standard Buttons, any prop passed will be passed down to the button.
-        </p>
+        </P>
         <ReactPlayground codeText={`\
 export default (
   <Tags>
@@ -28,9 +28,9 @@ export default (
 )\
 `} />
         <H3 size="medium">onClose</H3>
-        <p className="c-paragraph">
+        <P>
           An additional "onClose" prop is added for the close button. The following TagManager automatically removes tags. It will probably be released as an external component later on.
-        </p>
+        </P>
         <ReactPlayground codeText={`\
 class TagManager extends React.Component {
   constructor(props){

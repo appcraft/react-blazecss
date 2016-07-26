@@ -1,5 +1,5 @@
 import React from 'react'
-import {H2, H3} from '../../src'
+import {H2, H3, P} from '../../src'
 
 import ReactPlayground from './components/LiveEditor'
 
@@ -8,9 +8,9 @@ export class ListDemo extends React.Component {
     return (
       <div id="lists">
         <H2 size="large">Lists</H2>
-        <p className="c-paragraph">
+        <P>
           Ordered, un-ordered, indented
-        </p>
+        </P>
         <H3 size="medium">Un-ordered</H3>
         <ReactPlayground codeText={`\
 export default (

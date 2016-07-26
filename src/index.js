@@ -1,30 +1,14 @@
 export * from './Alert'
-
 export * from './Badge'
-
 export * from './Button'
-export * from './ButtonGroup'
-
 export * from './Calendar'
-
 export * from './Heading'
-
 export * from './List'
-
 export * from './Nav'
-export * from './NavContent'
-export * from './NavItem'
-
+export * from './P'
 export * from './Tab'
-export * from './TabHeading'
-export * from './TabPane'
-export * from './Tabs'
-
-export * from './Tag'
-
 export * from './Table'
-
+export * from './Tag'
 export * from './Toggle'
-
 export * from './Tree'
 

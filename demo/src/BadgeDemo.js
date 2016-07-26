@@ -1,5 +1,5 @@
 import React from 'react'
-import {H2, H3} from '../../src'
+import {H2, H3, P} from '../../src'
 
 import ReactPlayground from './components/LiveEditor'
 import { PropsTable, Props } from './components/PropsTable'
@@ -9,13 +9,13 @@ export class BadgeDemo extends React.Component {
     return (
       <div id="badges">
         <H2 size="large">Badges</H2>
-        <p className="c-paragraph">
+        <P>
           Badges are useful when you want to add additional info. Like a version number of a project or for status messages for individual items.
-        </p>
+        </P>
         <H3 size="medium">Styling</H3>
-        <p className="c-paragraph">
+        <P>
           Use any of the available blaze styles to quickly create a styled badge. Just modify the <code>bStyle</code> prop.
-        </p>
+        </P>
         <ReactPlayground codeText={`\
 export default (
   <div>

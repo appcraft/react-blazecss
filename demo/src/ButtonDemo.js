@@ -1,5 +1,5 @@
 import React from 'react'
-import {H2, H3, Table, TR, TH, TD, TBody, THead, TCaption } from '../../src'
+import {H2, H3, P} from '../../src'
 
 import ReactPlayground from './components/LiveEditor'
 import { PropsTable, Props } from './components/PropsTable'
@@ -10,9 +10,9 @@ export class ButtonDemo extends React.Component {
       <div id="buttons">
         <H2 size="large">Buttons</H2>
         <H3 size="medium">Styling</H3>
-        <p className="c-paragraph">
+        <P>
           Use any of the available blaze styles to quickly create a styled button. Just modify the <code>bStyle</code> prop.
-        </p>
+        </P>
         <ReactPlayground codeText={`\
 export default (
   <div>
@@ -91,6 +91,12 @@ export default (
           Props.bStyle,
           Props.ghost,
           Props.href,
+          Props.rounded,
+          Props.size
+        ]} />
+
+        <PropsTable caption="ButtonGroup props" data={[
+          Props.ghost,
           Props.rounded,
           Props.size
         ]} />

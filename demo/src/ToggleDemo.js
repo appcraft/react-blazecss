@@ -1,5 +1,5 @@
 import React from 'react'
-import {H2, H3} from '../../src'
+import {H2, H3, P} from '../../src'
 
 import ReactPlayground from './components/LiveEditor'
 import { PropsTable, Props } from './components/PropsTable'
@@ -9,13 +9,13 @@ export class ToggleDemo extends React.Component {
     return (
       <div id="toggles">
         <H2 size="large">Toggles</H2>
-        <p className="c-paragraph">
+        <P>
           Prettier checkboxes...
-        </p>
+        </P>
         <H3 size="medium">Styling</H3>
-        <p className="c-paragraph">
+        <P>
           Use any of the available blaze styles to quickly create a styled toggle. Just modify the <code>bStyle</code> prop.
-        </p>
+        </P>
         <ReactPlayground codeText={`\
 export default (
   <div>
@@ -28,9 +28,9 @@ export default (
 )\
 `} />
         <H3 size="medium">Controlled</H3>
-        <p className="c-paragraph">
+        <P>
           Controlled components don't update automatically
-        </p>
+        </P>
         <ReactPlayground codeText={`\
 class ControlledToggle extends React.Component {
 
@@ -61,9 +61,9 @@ class ControlledToggle extends React.Component {
 export default <ControlledToggle />\
 `} />
         <H3 size="medium">Animate</H3>
-        <p className="c-paragraph">
+        <P>
           The <code>animate</code> prop can be used to turn on animations
-        </p>
+        </P>
         <ReactPlayground codeText={`\
 export default (
   <div>

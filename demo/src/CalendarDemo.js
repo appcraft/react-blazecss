@@ -1,5 +1,5 @@
 import React from 'react'
-import {H2, H3} from '../../src'
+import {H2, H3, P} from '../../src'
 
 import ReactPlayground from './components/LiveEditor'
 
@@ -9,10 +9,10 @@ export class CalendarDemo extends React.Component {
       <div id="calendars">
         <H2 size="large">Calendars</H2>
         <H3 size="medium">Calendar (controlled)</H3>
-        <p className="c-paragraph">
+        <P>
           ReactBlazeCSS's calendar is a pure UI component. It won't manage any state, but stays 100% lightweight.
           An external component using moment.js to build the calendar will be provided soon as a plug'n'play component.
-        </p>
+        </P>
         <ReactPlayground codeText={`\
 function setYear(num) {
   alert("should set year to " + num)

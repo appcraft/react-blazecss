@@ -1,5 +1,5 @@
 import React from 'react'
-import {H2, H3} from '../../src'
+import {H2, H3, P} from '../../src'
 
 import ReactPlayground from './components/LiveEditor'
 
@@ -9,9 +9,9 @@ export class TabDemo extends React.Component {
       <div id="tabs">
         <H2 size="large">Tabs</H2>
         <H3 size="medium">Uncontrolled tab example</H3>
-        <p className="c-paragraph">
+        <P>
           Uncontrolled components have internal state and udpate automatically.
-        </p>
+        </P>
         <ReactPlayground codeText={`\
 export default (
   <Tabs defaultActiveKey={1} animate bStyle="primary">
@@ -23,10 +23,10 @@ export default (
 `} />
 
         <H3 size="medium">Controlled tab example (activeKey={2})</H3>
-        <p className="c-paragraph">
+        <P>
           Controlled tabs are pure UI components and rely on external code to update.
           This component has activeKey set to 2 and won't change on clicks.
-        </p>
+        </P>
         <ReactPlayground codeText={`\
 export default (
   <Tabs activeKey={2} animate bStyle="primary">

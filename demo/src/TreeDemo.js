@@ -1,5 +1,5 @@
 import React from 'react'
-import {H2, H3} from '../../src'
+import {H2, H3, P} from '../../src'
 
 import ReactPlayground from './components/LiveEditor'
 
@@ -8,13 +8,13 @@ export class TreeDemo extends React.Component {
     return (
       <div id="trees">
         <H2 size="large">Trees</H2>
-        <p className="c-paragraph">
+        <P>
           Expandable tree structure
-        </p>
+        </P>
         <H3 size="medium">Expandable and Expanded</H3>
-        <p className="c-paragraph">
+        <P>
           By default a Tree is a controlled UI component, so the following components won't change on click. 
-        </p>
+        </P>
         <ReactPlayground codeText={`
 export default (
   <Tree>
@@ -47,12 +47,12 @@ export default (
 )
 `} />
         <H3 size="medium">DataTree</H3>
-        <p className="c-paragraph">
+        <P>
           Automatic tree management is possible using the DataTree and by passing it data.
-        </p>
-        <p className="c-paragraph">
+        </P>
+        <P>
           The API is subject to change and this will probably be extracted into a separate and more feature-packed package.
-        </p>
+        </P>
         <ReactPlayground codeText={`
 const data = [
   {label: "Directory 1", children: [
