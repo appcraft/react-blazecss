@@ -7,7 +7,7 @@ import { PropsTable, Props } from './components/PropsTable'
 export class TagDemo extends React.Component {
   render(){
     return (
-      <div id="tags">
+      <div>
         <H2 size="large">Tags</H2>
         <P>
           WIP, will add tag input soon

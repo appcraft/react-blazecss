@@ -6,7 +6,7 @@ import ReactPlayground from './components/LiveEditor'
 export class ListDemo extends React.Component {
   render(){
     return (
-      <div id="lists">
+      <div>
         <H2 size="large">Lists</H2>
         <P>
           Ordered, un-ordered, indented

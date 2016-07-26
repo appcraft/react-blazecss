@@ -6,7 +6,7 @@ import ReactPlayground from './components/LiveEditor'
 export class TreeDemo extends React.Component {
   render(){
     return (
-      <div id="trees">
+      <div>
         <H2 size="large">Trees</H2>
         <P>
           Expandable tree structure

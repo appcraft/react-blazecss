@@ -6,7 +6,7 @@ import ReactPlayground from './components/LiveEditor'
 export class CalendarDemo extends React.Component {
   render(){
     return (
-      <div id="calendars">
+      <div>
         <H2 size="large">Calendars</H2>
         <H3 size="medium">Calendar (controlled)</H3>
         <P>

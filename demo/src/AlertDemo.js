@@ -7,7 +7,7 @@ import { PropsTable, Props } from './components/PropsTable'
 export class AlertDemo extends React.Component {
   render(){
     return (
-      <div id="alerts">
+      <div>
         <H2 size="large">Alerts</H2>
         <H3 size="medium">Styling</H3>
         <ReactPlayground codeText={`\

@@ -6,7 +6,7 @@ import ReactPlayground from './components/LiveEditor'
 export class TabDemo extends React.Component {
   render(){
     return (
-      <div id="tabs">
+      <div>
         <H2 size="large">Tabs</H2>
         <H3 size="medium">Uncontrolled tab example</H3>
         <P>

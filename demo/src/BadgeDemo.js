@@ -7,7 +7,7 @@ import { PropsTable, Props } from './components/PropsTable'
 export class BadgeDemo extends React.Component {
   render(){
     return (
-      <div id="badges">
+      <div>
         <H2 size="large">Badges</H2>
         <P>
           Badges are useful when you want to add additional info. Like a version number of a project or for status messages for individual items.

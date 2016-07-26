@@ -6,7 +6,7 @@ import ReactPlayground from './components/LiveEditor'
 export class TableDemo extends React.Component {
   render(){
     return (
-      <div id="tables">
+      <div>
         <H2 size="large">Tables</H2>
         <H3 size="medium">Basic Table</H3>
         <ReactPlayground codeText={`\

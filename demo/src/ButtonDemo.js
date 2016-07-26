@@ -7,7 +7,7 @@ import { PropsTable, Props } from './components/PropsTable'
 export class ButtonDemo extends React.Component {
   render(){
     return (
-      <div id="buttons">
+      <div>
         <H2 size="large">Buttons</H2>
         <H3 size="medium">Styling</H3>
         <P>

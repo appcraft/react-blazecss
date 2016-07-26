@@ -7,7 +7,7 @@ import { PropsTable, Props } from './components/PropsTable'
 export class ToggleDemo extends React.Component {
   render(){
     return (
-      <div id="toggles">
+      <div>
         <H2 size="large">Toggles</H2>
         <P>
           Prettier checkboxes...

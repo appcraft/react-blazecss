@@ -6,7 +6,7 @@ import ReactPlayground from './components/LiveEditor'
 export class NavDemo extends React.Component {
   render(){
     return (
-      <div id="navs">
+      <div>
         <H2 size="large">Navs</H2>
         <H3 size="medium">Normal</H3>
         <ReactPlayground codeText={`\

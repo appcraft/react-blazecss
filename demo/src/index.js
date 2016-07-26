@@ -21,31 +21,36 @@ require('blaze/dist/blaze.min.css')
 require('blaze/dist/blaze.animations.min.css')
 require('./css/demo.css')
 
-class WaypointSelector extends React.Component {
+class Section extends React.Component {
   constructor(props){
     super(props)
 
     this.handleEnter = (e) => {
       if (e.currentPosition === "inside" && e.previousPosition === "above"){
-        const { prev, onEnter } = this.props
-        onEnter(prev)
+        const { id, onEnter } = this.props
+        onEnter(id)
       }
     }
     this.handleLeave = (e) => {
       if (e.currentPosition === "above" && e.previousPosition === "inside"){
-        const { next, onEnter } = this.props
-        onEnter(next)
+        const { id, onEnter } = this.props
+        onEnter(id)
       }
     }
   }
 
   render(){
+    const { id } = this.props
     return (
-      <Waypoint
-        topOffset={50}
-        onEnter={this.handleEnter}
-        onLeave={this.handleLeave}
-      />
+      <div id={id}>
+        <Waypoint
+          topOffset={50}
+          onLeave={this.handleLeave} />
+        {this.props.children}
+        <Waypoint
+          topOffset={50}
+          onEnter={this.handleEnter} />
+      </div>
     )
   }
 }
@@ -78,28 +83,39 @@ class Demo extends React.Component {
             and heavily inspired by <a className="c-link" href="https://react-bootstrap.github.io">ReactBoostrap</a>.<br />
             Support is pretty limited and expiramental for now, more components will be added soon.
           </P>
-          <WaypointSelector prev="" next="alerts" onEnter={this.onEnter} />
-          <AlertDemo />
-          <WaypointSelector prev="alerts" next="badges" onEnter={this.onEnter} />
-          <BadgeDemo />
-          <WaypointSelector prev="badges" next="buttons" onEnter={this.onEnter} />
-          <ButtonDemo />
-          <WaypointSelector prev="buttons" next="calendars" onEnter={this.onEnter} />
-          <CalendarDemo />
-          <WaypointSelector prev="calendars" next="lists" onEnter={this.onEnter} />
-          <ListDemo />
-          <WaypointSelector prev="lists" next="navs" onEnter={this.onEnter} />
-          <NavDemo />
-          <WaypointSelector prev="navs" next="tables" onEnter={this.onEnter} />
-          <TableDemo />
-          <WaypointSelector prev="tables" next="tabs" onEnter={this.onEnter} />
-          <TabDemo />
-          <WaypointSelector prev="tabs" next="tags" onEnter={this.onEnter} />
-          <TagDemo />
-          <WaypointSelector prev="tags" next="toggles" onEnter={this.onEnter} />
-          <ToggleDemo />
-          <WaypointSelector prev="toggles" next="trees" onEnter={this.onEnter} />
-          <TreeDemo />
+          <Section id="alerts" onEnter={this.onEnter}>
+            <AlertDemo />
+          </Section>
+          <Section id="badges" onEnter={this.onEnter}>
+            <BadgeDemo />
+          </Section>
+          <Section id="buttons" onEnter={this.onEnter}>
+            <ButtonDemo />
+          </Section>
+          <Section id="calendars" onEnter={this.onEnter}>
+            <CalendarDemo />
+          </Section>
+          <Section id="lists" onEnter={this.onEnter}>
+            <ListDemo />
+          </Section>
+          <Section id="navs" onEnter={this.onEnter}>
+            <NavDemo />
+          </Section>
+          <Section id="tables" onEnter={this.onEnter}>
+            <TableDemo />
+          </Section>
+          <Section id="tabs" onEnter={this.onEnter}>
+            <TabDemo />
+          </Section>
+          <Section id="tags" onEnter={this.onEnter}>
+            <TagDemo />
+          </Section>
+          <Section id="toggles" onEnter={this.onEnter}>
+            <ToggleDemo />
+          </Section>
+          <Section id="trees" onEnter={this.onEnter}>
+            <TreeDemo />
+          </Section>
           <br />
           <br />
         </main>
