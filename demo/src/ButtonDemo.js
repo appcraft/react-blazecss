@@ -9,7 +9,7 @@ export class ButtonDemo extends React.Component {
       <div id="buttons">
         <H2 size="large">Buttons</H2>
         <H3 size="medium">Styling</H3>
-        <p className="p-class">
+        <p className="c-paragraph">
           Use any of the available blaze styles to quickly create a styled button. Just modify the <code>bStyle</code> prop.
         </p>
         <ReactPlayground codeText={`\
@@ -21,6 +21,7 @@ export default (
     <Button bStyle="success">Success</Button>{" "}
     <Button bStyle="error">Error</Button>{" "}
     <Button bStyle="error" rounded ghost>Rounded Ghost Error</Button>{" "}
+    <Button href="#buttons">Link</Button>{" "}
     <Button disabled>Disabled</Button>
   </div>
 )\
@@ -112,6 +113,12 @@ export default (
               <td className="c-table__cell">boolean</td>
               <td className="c-table__cell" style={{maxWidth: 90}}>false</td>
               <td className="c-table__cell">Set to true to draw a button with inverted colors (white background and colored border)</td>
+            </tr>
+            <tr className="c-table__row">
+              <td className="c-table__cell" style={{maxWidth: 90}}>href</td>
+              <td className="c-table__cell">string</td>
+              <td className="c-table__cell" style={{maxWidth: 90}}></td>
+              <td className="c-table__cell">If present, changes the button into a link tag with the button style and sets <code>href</code></td>
             </tr>
             <tr className="c-table__row">
               <td className="c-table__cell" style={{maxWidth: 90}}>rounded</td>

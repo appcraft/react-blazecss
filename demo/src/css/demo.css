@@ -87,6 +87,7 @@ code {
   .playground.playground--side-code {
     display: table;
     width: 100%;
+    margin-bottom: 0;
   }
 
   .playground.playground--side-code .playgroundPreview {

@@ -8,14 +8,16 @@ var babel = require('react-live-editor/node_modules/babel-core');
 // variable names.
 const { Alerts, Alert } = require('../../src/Alert')
 const { Badge } = require('../../src/Badge')
-const Button = require('../../src/Button').Button
-const ButtonGroup = require('../../src/ButtonGroup').ButtonGroup
+const { Button } = require('../../src/Button')
+const { ButtonGroup } = require('../../src/ButtonGroup')
 const { Calendar, CalendarHeaderControl, CalendarDays, CalendarDayLabels } = require('../../src/Calendar')
-const Nav = require('../../src/Nav').Nav
-const NavContent = require('../../src/NavContent').NavContent
-const NavItem = require('../../src/NavItem').NavItem
-const Tabs = require('../../src/Tabs').Tabs
-const Tab = require('../../src/Tab').Tab
+const { UL, OL, LI } = require('../../src/List')
+const { Nav } = require('../../src/Nav')
+const { NavContent } = require('../../src/NavContent')
+const { NavItem } = require('../../src/NavItem')
+const { Tabs } = require('../../src/Tabs')
+const { Tab } = require('../../src/Tab')
+const { Tags, Tag } = require('../../src/Tag')
 const { Toggle } = require('../../src/Toggle')
 const { Tree, TreeItem, DataTree, DataTreeItem } = require('../../src/Tree')
 

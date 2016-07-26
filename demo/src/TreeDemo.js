@@ -8,11 +8,11 @@ export class TreeDemo extends React.Component {
     return (
       <div id="trees">
         <H2 size="large">Trees</H2>
-        <p className="p-class">
+        <p className="c-paragraph">
           Expandable tree structure
         </p>
         <H3 size="medium">Expandable and Expanded</H3>
-        <p className="p-class">
+        <p className="c-paragraph">
           By default a Tree is a controlled UI component, so the following components won't change on click. 
         </p>
         <ReactPlayground codeText={`
@@ -47,10 +47,10 @@ export default (
 )
 `} />
         <H3 size="medium">DataTree</H3>
-        <p className="p-class">
+        <p className="c-paragraph">
           Automatic tree management is possible using the DataTree and by passing it data.
         </p>
-        <p className="p-class">
+        <p className="c-paragraph">
           The API is subject to change and this will probably be extracted into a separate and more feature-packed package.
         </p>
         <ReactPlayground codeText={`

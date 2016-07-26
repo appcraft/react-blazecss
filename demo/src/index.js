@@ -5,12 +5,14 @@ import { AlertDemo } from './AlertDemo'
 import { BadgeDemo } from './BadgeDemo'
 import { ButtonDemo } from './ButtonDemo'
 import { CalendarDemo } from './CalendarDemo'
+import { ListDemo } from './ListDemo'
 import { NavDemo } from './NavDemo'
 import { TabDemo } from './TabDemo'
+import { TagDemo } from './TagDemo'
 import { ToggleDemo } from './ToggleDemo'
 import { TreeDemo } from './TreeDemo'
 
-import {H1, H2, H3, H4, H5, H6, Button, Nav, NavContent, NavItem} from '../../src'
+import {H1, H2, H3, H4, H5, H6, UL, LI, Button, Nav, NavContent, NavItem} from '../../src'
 
 require('blaze/dist/blaze.min.css')
 require('blaze/dist/blaze.animations.min.css')
@@ -35,8 +37,10 @@ let Demo = React.createClass({
           <BadgeDemo />
           <ButtonDemo />
           <CalendarDemo />
+          <ListDemo />
           <NavDemo />
           <TabDemo />
+          <TagDemo />
           <ToggleDemo />
           <TreeDemo />
           <br />
@@ -44,16 +48,18 @@ let Demo = React.createClass({
         </main>
         <nav className="o-grid__cell o-grid__cell--width-20 nav fixed@large" style={{paddingTop: 50}}>
           <H3 size="medium">Components</H3>
-          <ul className="c-list c-list--unstyled">
-            <li className="c-list__item "><a className="c-link" href="#alerts">Alerts</a></li>
-            <li className="c-list__item "><a className="c-link" href="#badges">Badges</a></li>
-            <li className="c-list__item "><a className="c-link" href="#buttons">Buttons</a></li>
-            <li className="c-list__item "><a className="c-link" href="#calendars">Calendars</a></li>
-            <li className="c-list__item "><a className="c-link" href="#navs">Navs</a></li>
-            <li className="c-list__item "><a className="c-link" href="#tabs">Tabs</a></li>
-            <li className="c-list__item "><a className="c-link" href="#toggles">Toggles</a></li>
-            <li className="c-list__item "><a className="c-link" href="#trees">Trees</a></li>
-          </ul>
+          <UL unstyled>
+            <LI><a className="c-link" href="#alerts">Alerts</a></LI>
+            <LI><a className="c-link" href="#badges">Badges</a></LI>
+            <LI><a className="c-link" href="#buttons">Buttons</a></LI>
+            <LI><a className="c-link" href="#calendars">Calendars</a></LI>
+            <LI><a className="c-link" href="#lists">Lists</a></LI>
+            <LI><a className="c-link" href="#navs">Navs</a></LI>
+            <LI><a className="c-link" href="#tabs">Tabs</a></LI>
+            <LI><a className="c-link" href="#tags">Tags</a></LI>
+            <LI><a className="c-link" href="#toggles">Toggles</a></LI>
+            <LI><a className="c-link" href="#trees">Trees</a></LI>
+          </UL>
         </nav>
       </div>
       

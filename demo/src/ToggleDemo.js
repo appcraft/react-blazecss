@@ -8,11 +8,11 @@ export class ToggleDemo extends React.Component {
     return (
       <div id="toggles">
         <H2 size="large">Toggles</H2>
-        <p className="p-class">
+        <p className="c-paragraph">
           Prettier checkboxes...
         </p>
         <H3 size="medium">Styling</H3>
-        <p className="p-class">
+        <p className="c-paragraph">
           Use any of the available blaze styles to quickly create a styled toggle. Just modify the <code>bStyle</code> prop.
         </p>
         <ReactPlayground codeText={`\
@@ -27,7 +27,7 @@ export default (
 )\
 `} />
         <H3 size="medium">Controlled</H3>
-        <p className="p-class">
+        <p className="c-paragraph">
           Controlled components don't update automatically
         </p>
         <ReactPlayground codeText={`\
@@ -60,7 +60,7 @@ class ControlledToggle extends React.Component {
 export default <ControlledToggle />\
 `} />
         <H3 size="medium">Animate</H3>
-        <p className="p-class">
+        <p className="c-paragraph">
           The <code>animate</code> prop can be used to turn on animations
         </p>
         <ReactPlayground codeText={`\

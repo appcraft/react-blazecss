@@ -3,17 +3,24 @@ import { bem }  from './utils'
 
 export class Button extends React.Component {
   render(){
-    const { children, bStyle, rounded, ghost, size, block, ...props } = this.props
+    const { children, bStyle, className, rounded, ghost, size, block, href, ...props } = this.props
     
-    var className = bem("c-button", {
+
+    var classNames = bem("c-button", {
       ghost: ghost && !bStyle,
       [!ghost && bStyle]: true,
       [ghost && bStyle && ("ghost-" + bStyle)]: true,
       [size]: true,
       rounded,
       block,
+    }, {
+      [className]: true
     })
+    console.log("classNames", classNames, className)
     
-    return <button type="button" {...props} className={className}>{children}</button>
+    if (href){
+      return <a {...props} href={href} className={classNames}>{children}</a>
+    }
+    return <button type="button" {...props} className={classNames}>{children}</button>
   }
 }
