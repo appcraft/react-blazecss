@@ -1,7 +1,7 @@
 import React from 'react'
 import {H2, H3} from '../../src'
 
-import ReactPlayground from './LiveEditor'
+import ReactPlayground from './components/LiveEditor'
 
 export class CalendarDemo extends React.Component {
   render(){

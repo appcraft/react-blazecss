@@ -12,9 +12,7 @@ export class Tags extends React.Component {
     
     return (
       <div {...props} className={classNames}>
-        <span class="c-tags__container">
-          {children}
-        </span>
+        {children}
       </div>
     )
   }

@@ -22,6 +22,8 @@ export * from './Tabs'
 
 export * from './Tag'
 
+export * from './Table'
+
 export * from './Toggle'
 
 export * from './Tree'

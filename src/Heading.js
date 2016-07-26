@@ -1,51 +1,24 @@
 import React from 'react'
 import { bem } from './utils'
 
-export class Heading extends React.Component {
-  render(){
-    const { Component, size, className, children, ...props } = this.props
+function makeHeading(Component, defaultSize){
+  return class extends React.Component {
+    render(){
+      const { size=defaultSize, className, children, ...props } = this.props
 
-    const classNames = bem("c-heading", {
-      [size]: true
-    }, {
-      [className]: true
-    })
-    return <Component {...props} className={classNames}>{children}</Component>
+      const classNames = bem("c-heading", {
+        [size]: true
+      }, {
+        [className]: true
+      })
+      return <Component {...props} className={classNames}>{children}</Component>
+    }
   }
 }
 
-export class H1 extends React.Component {
-  render(){
-    return <Heading Component="h1" size="super" {...this.props} >{this.props.children}</Heading>
-  }
-}
-
-export class H2 extends React.Component {
-  render(){
-    return <Heading Component="h2" size="xlarge" {...this.props} >{this.props.children}</Heading>
-  }
-}
-
-export class H3 extends React.Component {
-  render(){
-    return <Heading Component="h3" size="large" {...this.props} >{this.props.children}</Heading>
-  }
-}
-
-export class H4 extends React.Component {
-  render(){
-    return <Heading Component="h4" size="medium" {...this.props} >{this.props.children}</Heading>
-  }
-}
-
-export class H5 extends React.Component {
-  render(){
-    return <Heading Component="h5" size="small" {...this.props} >{this.props.children}</Heading>
-  }
-}
-
-export class H6 extends React.Component {
-  render(){
-    return <Heading Component="h6" size="xsmall" {...this.props} >{this.props.children}</Heading>
-  }
-}
+export const H1 = makeHeading("h1", "super")
+export const H2 = makeHeading("h2", "xlarge")
+export const H3 = makeHeading("h3", "large")
+export const H4 = makeHeading("h4", "medium")
+export const H5 = makeHeading("h5", "small")
+export const H6 = makeHeading("h6", "xsmall") 

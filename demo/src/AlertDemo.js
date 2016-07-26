@@ -1,7 +1,8 @@
 import React from 'react'
 import {H2, H3} from '../../src'
 
-import ReactPlayground from './LiveEditor'
+import ReactPlayground from './components/LiveEditor'
+import { PropsTable, Props } from './components/PropsTable'
 
 export class AlertDemo extends React.Component {
   render(){
@@ -20,6 +21,11 @@ export default (
   </Alerts>
 )\
 `} />
+        <H3 size="medium">Props</H3>
+        <PropsTable caption="Alert props" data={[
+          Props.bStyle, 
+          Props.onClose
+        ]} />
       </div>
     )
   }

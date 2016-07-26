@@ -1,7 +1,8 @@
 import React from 'react'
 import {H2, H3} from '../../src'
 
-import ReactPlayground from './LiveEditor'
+import ReactPlayground from './components/LiveEditor'
+import { PropsTable, Props } from './components/PropsTable'
 
 export class ToggleDemo extends React.Component {
   render(){
@@ -72,49 +73,14 @@ export default (
   </div>
 )\
 `} />
-        <table className="c-table c-table--striped c-table--condensed">
-          <caption className="c-table__caption">Toggle props</caption>
-          <thead className="c-table__head">
-          <tr className="c-table__row c-table__row--heading">
-            <th className="c-table__cell" style={{maxWidth: 110}}>Name</th>
-            <th className="c-table__cell">Type</th>
-            <th className="c-table__cell" style={{maxWidth: 90}}>Default</th>
-            <th className="c-table__cell">Description</th>
-          </tr>
-          </thead>
-          <tbody className="c-table__body">
-            <tr className="c-table__row">
-              <td className="c-table__cell" style={{maxWidth: 110}}>animate</td>
-              <td className="c-table__cell"><span><code>true</code>, <code>false</code>, <code>"slow"</code>, or <code>"fast"</code></span></td>
-              <td className="c-table__cell" style={{maxWidth: 90}}>false</td>
-              <td className="c-table__cell">Turn on animations and set the speed</td>
-            </tr>
-            <tr className="c-table__row">
-              <td className="c-table__cell" style={{maxWidth: 110}}>bStyle</td>
-              <td className="c-table__cell"><span>empty or one of <code>"primary"</code>, <code>"secondary"</code>, <code>"success"</code>, <code>"error"</code></span></td>
-              <td className="c-table__cell" style={{maxWidth: 90}}></td>
-              <td className="c-table__cell">BlazeCSS style</td>
-            </tr>
-            <tr className="c-table__row">
-              <td className="c-table__cell" style={{maxWidth: 110}}>checked</td>
-              <td className="c-table__cell">boolean</td>
-              <td className="c-table__cell" style={{maxWidth: 90}}></td>
-              <td className="c-table__cell">Use <code>checked</code> to turn the component into a controlled component</td>
-            </tr>
-            <tr className="c-table__row">
-              <td className="c-table__cell" style={{maxWidth: 110}}>defaultChecked</td>
-              <td className="c-table__cell">boolean</td>
-              <td className="c-table__cell" style={{maxWidth: 90}}>false</td>
-              <td className="c-table__cell">Default checked value for uncontrolled components</td>
-            </tr>
-            <tr className="c-table__row">
-              <td className="c-table__cell" style={{maxWidth: 110}}>onChange</td>
-              <td className="c-table__cell">function</td>
-              <td className="c-table__cell" style={{maxWidth: 90}}></td>
-              <td className="c-table__cell">onChange callback for the internal input component</td>
-            </tr>
-          </tbody>
-        </table>
+        <H3 size="medium">Props</H3>
+        <PropsTable caption="Toggle props" data={[
+          Props.animate,
+          Props.bStyle,
+          Props.checked,
+          Props.defaultChecked,
+          Props.onChange,
+        ]} />
       </div>
     )
   }

@@ -8,6 +8,7 @@ import { CalendarDemo } from './CalendarDemo'
 import { ListDemo } from './ListDemo'
 import { NavDemo } from './NavDemo'
 import { TabDemo } from './TabDemo'
+import { TableDemo } from './TableDemo'
 import { TagDemo } from './TagDemo'
 import { ToggleDemo } from './ToggleDemo'
 import { TreeDemo } from './TreeDemo'
@@ -39,6 +40,7 @@ let Demo = React.createClass({
           <CalendarDemo />
           <ListDemo />
           <NavDemo />
+          <TableDemo />
           <TabDemo />
           <TagDemo />
           <ToggleDemo />
@@ -55,6 +57,7 @@ let Demo = React.createClass({
             <LI><a className="c-link" href="#calendars">Calendars</a></LI>
             <LI><a className="c-link" href="#lists">Lists</a></LI>
             <LI><a className="c-link" href="#navs">Navs</a></LI>
+            <LI><a className="c-link" href="#tables">Tables</a></LI>
             <LI><a className="c-link" href="#tabs">Tabs</a></LI>
             <LI><a className="c-link" href="#tags">Tags</a></LI>
             <LI><a className="c-link" href="#toggles">Toggles</a></LI>

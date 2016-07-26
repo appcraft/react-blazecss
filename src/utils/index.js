@@ -1,3 +1,4 @@
+import React from 'react'
 
 function bemOptions(prefix, options){
   if (!options) return ""
@@ -24,3 +25,17 @@ export function bem(name, options, genericOptions){
 }
 
 
+export function makeClass(Component, bemName){
+  return class extends React.Component {
+    render(){
+      const { children, className, ...props } = this.props
+      
+      var classNames = bem(bemName, {
+      }, {
+        [className]: true
+      })
+      
+      return <Component {...props} className={classNames}>{children}</Component>
+    }
+  }
+}

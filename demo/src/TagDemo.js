@@ -1,7 +1,8 @@
 import React from 'react'
 import {H2, H3} from '../../src'
 
-import ReactPlayground from './LiveEditor'
+import ReactPlayground from './components/LiveEditor'
+import { PropsTable, Props } from './components/PropsTable'
 
 export class TagDemo extends React.Component {
   render(){
@@ -65,6 +66,16 @@ class TagManager extends React.Component {
 }
 export default <TagManager tags={["tag one", "tag two", "tag three"]} />\
 `} />
+        <H3 size="medium">Props</H3>
+        <PropsTable caption="Tag props (mostly inherited from Button)" data={[
+          Props.block,
+          Props.bStyle,
+          Props.ghost,
+          Props.href,
+          Props.onClose,
+          Props.rounded,
+          Props.size
+        ]} />
       </div>
     )
   }
