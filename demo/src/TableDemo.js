@@ -24,7 +24,6 @@ export default (
       <TR><TD>Nyota</TD><TD>Uhura</TD><TD>@comms</TD></TR>
     </TBody>
   </Table>
-)
 )\
 `} />
         <H3 size="medium">Striped Table</H3>
