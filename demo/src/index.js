@@ -15,11 +15,55 @@ import { TreeDemo } from './TreeDemo'
 
 import {H1, H2, H3, H4, H5, H6, UL, LI, P, Button, Nav, NavContent, NavItem} from '../../src'
 
+import Waypoint from 'react-waypoint'
+
 require('blaze/dist/blaze.min.css')
 require('blaze/dist/blaze.animations.min.css')
 require('./css/demo.css')
 
-let Demo = React.createClass({
+class WaypointSelector extends React.Component {
+  constructor(props){
+    super(props)
+
+    this.handleEnter = (e) => {
+      if (e.currentPosition === "inside" && e.previousPosition === "above"){
+        const { prev, onEnter } = this.props
+        onEnter(prev)
+      }
+    }
+    this.handleLeave = (e) => {
+      if (e.currentPosition === "above" && e.previousPosition === "inside"){
+        const { next, onEnter } = this.props
+        onEnter(next)
+      }
+    }
+  }
+
+  render(){
+    return (
+      <Waypoint
+        topOffset={50}
+        onEnter={this.handleEnter}
+        onLeave={this.handleLeave}
+      />
+    )
+  }
+}
+
+class Demo extends React.Component {
+
+  constructor(props){
+    super(props)
+
+    this.state = {
+      selected: ""
+    }
+    this.onEnter = (selected) => {
+      console.log("onEnter", selected)
+      this.setState({selected})
+    }
+  }
+
   render() {
     return <div className="c-text">
       <Nav position="top" fixed inline shadow="higher">
@@ -34,41 +78,65 @@ let Demo = React.createClass({
             and heavily inspired by <a className="c-link" href="https://react-bootstrap.github.io">ReactBoostrap</a>.<br />
             Support is pretty limited and expiramental for now, more components will be added soon.
           </P>
+          <WaypointSelector prev="" next="alerts" onEnter={this.onEnter} />
           <AlertDemo />
+          <WaypointSelector prev="alerts" next="badges" onEnter={this.onEnter} />
           <BadgeDemo />
+          <WaypointSelector prev="badges" next="buttons" onEnter={this.onEnter} />
           <ButtonDemo />
+          <WaypointSelector prev="buttons" next="calendars" onEnter={this.onEnter} />
           <CalendarDemo />
+          <WaypointSelector prev="calendars" next="lists" onEnter={this.onEnter} />
           <ListDemo />
+          <WaypointSelector prev="lists" next="navs" onEnter={this.onEnter} />
           <NavDemo />
+          <WaypointSelector prev="navs" next="tables" onEnter={this.onEnter} />
           <TableDemo />
+          <WaypointSelector prev="tables" next="tabs" onEnter={this.onEnter} />
           <TabDemo />
+          <WaypointSelector prev="tabs" next="tags" onEnter={this.onEnter} />
           <TagDemo />
+          <WaypointSelector prev="tags" next="toggles" onEnter={this.onEnter} />
           <ToggleDemo />
+          <WaypointSelector prev="toggles" next="trees" onEnter={this.onEnter} />
           <TreeDemo />
           <br />
           <br />
         </main>
         <nav className="o-grid__cell o-grid__cell--width-20 nav fixed@large" style={{paddingTop: 50}}>
           <H3 size="medium">Components</H3>
-          <UL unstyled>
-            <LI><a className="c-link" href="#alerts">Alerts</a></LI>
-            <LI><a className="c-link" href="#badges">Badges</a></LI>
-            <LI><a className="c-link" href="#buttons">Buttons</a></LI>
-            <LI><a className="c-link" href="#calendars">Calendars</a></LI>
-            <LI><a className="c-link" href="#lists">Lists</a></LI>
-            <LI><a className="c-link" href="#navs">Navs</a></LI>
-            <LI><a className="c-link" href="#tables">Tables</a></LI>
-            <LI><a className="c-link" href="#tabs">Tabs</a></LI>
-            <LI><a className="c-link" href="#tags">Tags</a></LI>
-            <LI><a className="c-link" href="#toggles">Toggles</a></LI>
-            <LI><a className="c-link" href="#trees">Trees</a></LI>
+          <UL unstyled className="nav-menu">
+            {this.renderLink("alerts", "Alerts")}
+            {this.renderLink("badges", "Badges")}
+            {this.renderLink("buttons", "Buttons")}
+            {this.renderLink("calendars", "Calendars")}
+            {this.renderLink("lists", "Lists")}
+            {this.renderLink("navs", "Navs")}
+            {this.renderLink("tables", "Tables")}
+            {this.renderLink("tabs", "Tabs")}
+            {this.renderLink("tags", "Tags")}
+            {this.renderLink("toggles", "Toggles")}
+            {this.renderLink("trees", "Trees")}
           </UL>
         </nav>
       </div>
-      
     </div>
   }
-})
+
+  renderLink(id, name){
+    const active = id == this.state.selected
+    // Force selection in 50ms, used because trusting waypoints leaving doesn't work well on scroll jumps
+    return (
+      <LI className={active ? "active" : undefined}>
+        <a className="c-link" 
+           href={"#" + id} 
+           onClick={() => setTimeout(() => this.setState({selected: id}), 50)}>
+          {name}
+        </a>
+      </LI>
+    )
+  }
+}
 
 
 render(<Demo/>, document.querySelector('#demo'))

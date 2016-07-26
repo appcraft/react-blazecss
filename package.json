@@ -1,6 +1,6 @@
 {
   "name": "react-blazecss",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "ReactBlazeCSS React component",
   "main": "lib/index.js",
   "jsnext:main": "es6/index.js",
@@ -19,7 +19,7 @@
     "test:watch": "nwb test --server"
   },
   "dependencies": {
-    "blaze": "^2.10.0"
+    "blaze": "^2.10.2"
   },
   "peerDependencies": {
     "react": "15.x"

@@ -8,7 +8,16 @@ code {
 }
 
 .nav .c-list__item {
-    padding: 0.4em 0;
+    padding: 0.2em 0;
+}
+
+.nav-menu>li.c-list__item {
+  border-left: 2px solid white;
+  padding-left: 8px;
+}
+
+.nav-menu>li.c-list__item.active {
+  border-left-color: #1690f3;
 }
 
 .c-nav--inline .c-nav__content {
