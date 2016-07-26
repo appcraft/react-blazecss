@@ -16,7 +16,6 @@ export class Button extends React.Component {
     }, {
       [className]: true
     })
-    console.log("classNames", classNames, className)
     
     if (href){
       return <a {...props} href={href} className={classNames}>{children}</a>
