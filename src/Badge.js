@@ -10,6 +10,6 @@ export class Badge extends React.Component {
       rounded,
     })
     
-    return <span type="button" {...props} className={className}>{children}</span>
+    return <span {...props} className={className}>{children}</span>
   }
 }
