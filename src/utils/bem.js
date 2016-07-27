@@ -6,7 +6,7 @@ function bemOptions(prefix, options){
   var className = ""
   for(var key in options){
     if (key && (key !== "undefined") && (key !== "false") && options.hasOwnProperty(key)){
-      if (options[key] === true){
+      if (options[key]){
         className += " " + prefix + key
       }
     }
