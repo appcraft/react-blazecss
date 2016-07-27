@@ -24,6 +24,7 @@ export default (
     <Toggle bStyle="secondary" defaultChecked={true}>Secondary</Toggle>
     <Toggle bStyle="success" defaultChecked={true}>Success</Toggle>
     <Toggle bStyle="error" defaultChecked={true}>Error</Toggle>
+    <Toggle right defaultChecked={true}>Toggle on the right</Toggle>
   </div>
 )\
 `} />

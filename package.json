@@ -1,7 +1,7 @@
 {
   "name": "react-blazecss",
-  "version": "0.1.0",
-  "description": "ReactBlazeCSS React component",
+  "version": "0.1.1",
+  "description": "React components for BlazeCSS",
   "main": "lib/index.js",
   "jsnext:main": "es6/index.js",
   "files": [
@@ -18,15 +18,13 @@
     "test": "nwb test",
     "test:watch": "nwb test --server"
   },
-  "dependencies": {
-    "blaze": "^2.10.2"
-  },
   "peerDependencies": {
     "react": "15.x"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
+    "blaze": "^2.10.2",
     "classnames": "^2.2.5",
     "nwb": "0.9.x",
     "react": "15.x",
@@ -34,11 +32,22 @@
     "react-live-editor": "^5.2.1",
     "react-waypoint": "^3.1.0"
   },
-  "author": "",
-  "homepage": "",
+  "authors": [
+    {
+      "name": "Gregory Potdeviny",
+      "email": "gregory@appcraft.fr"
+    }
+  ],
+  "homepage": "https://appcraft.github.io/react-blazecss/",
   "license": "MIT",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appcraft/react-blazecss.git"
+  },
   "keywords": [
-    "react-component"
+    "react-component",
+    "react components",
+    "react",
+    "blazecss"
   ]
 }
