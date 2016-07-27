@@ -131,7 +131,7 @@ class Demo extends React.Component {
           <br />
           <br />
         </main>
-        <nav className="o-grid__cell o-grid__cell--width-20 nav fixed@medium" style={{paddingTop: 70}}>
+        <nav className="o-grid__cell o-grid__cell--width-20 nav fixed@large" style={{paddingTop: 70}}>
           <H3 size="medium" style={{padding: ".5em 0"}}>Introduction</H3>
           <UL unstyled className="nav-menu">
             {this.renderLink("example", "Example")}
