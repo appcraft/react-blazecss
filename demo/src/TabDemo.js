@@ -36,6 +36,32 @@ export default (
   </Tabs>
 )\
 `} />
+        <H3 size="medium">Styling</H3>
+        <P>
+          Tabs can be styled using the classic `bStyle` prop
+        </P>
+        <ReactPlayground codeText={`\
+export default (
+  <div>
+    <Tabs defaultActiveKey={1}>
+      <Tab eventKey={1} title="Default 1"></Tab>
+      <Tab eventKey={2} title="Default 2"></Tab>
+    </Tabs>
+    <Tabs defaultActiveKey={1} bStyle="secondary">
+      <Tab eventKey={1} title="Secondary 1"></Tab>
+      <Tab eventKey={2} title="Secondary 2"></Tab>
+    </Tabs>
+    <Tabs defaultActiveKey={1} bStyle="success">
+      <Tab eventKey={1} title="Success 1"></Tab>
+      <Tab eventKey={2} title="Success 2"></Tab>
+    </Tabs>
+    <Tabs defaultActiveKey={1} bStyle="error">
+      <Tab eventKey={1} title="Error 1"></Tab>
+      <Tab eventKey={2} title="Error 2"></Tab>
+    </Tabs>
+  </div>
+)\
+`} />
       </div>
     )
   }
