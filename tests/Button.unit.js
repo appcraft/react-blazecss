@@ -54,6 +54,14 @@ describe('Button', () => {
       </button>
     )
   })
+
+  it("changes to link when using href", () => {
+    expectJSX(<Button href="#">Text</Button>).toEqualJSX(
+      <a href="#" className="c-button">
+        Text
+      </a>
+    )
+  })
 })
 
 describe('ButtonGroup', () => {
