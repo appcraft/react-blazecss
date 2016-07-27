@@ -4,17 +4,16 @@ import expect from 'expect'
 
 import {Toggle} from '../src/Toggle'
 
-let renderer = createRenderer();
-
-function quickRender(element){
-    renderer.render(element);
-    return renderer.getRenderOutput();
+function expectJSX(element){
+  let renderer = createRenderer();
+  renderer.render(element);
+  return expect(renderer.getRenderOutput());
 }
 
 describe('Toggle', () => {
 
   it("renders", () => {
-    expect(quickRender(<Toggle>Text</Toggle>)).toEqualJSX(
+    expectJSX(<Toggle>Text</Toggle>).toEqualJSX(
       <label className="c-toggle">
         <input type="checkbox"
                 checked={undefined} 
@@ -29,7 +28,7 @@ describe('Toggle', () => {
   })
 
   it("works with bStyle", () => {
-    expect(quickRender(<Toggle bStyle="primary">Text</Toggle>)).toEqualJSX(
+    expectJSX(<Toggle bStyle="primary">Text</Toggle>).toEqualJSX(
       <label className="c-toggle c-toggle--primary">
         <input type="checkbox"
                 checked={undefined} 
@@ -44,7 +43,7 @@ describe('Toggle', () => {
   })
 
   it("animates", () => {
-    expect(quickRender(<Toggle animate="slow">Text</Toggle>)).toEqualJSX(
+    expectJSX(<Toggle animate="slow">Text</Toggle>).toEqualJSX(
       <label className="c-toggle a-toggle a-toggle--slow">
         <input type="checkbox"
                 checked={undefined} 
@@ -59,7 +58,7 @@ describe('Toggle', () => {
   })
 
   it("works with right", () => {
-    expect(quickRender(<Toggle right>Text</Toggle>)).toEqualJSX(
+    expectJSX(<Toggle right>Text</Toggle>).toEqualJSX(
       <label className="c-toggle">
         <input type="checkbox"
                 checked={undefined} 
@@ -74,25 +73,25 @@ describe('Toggle', () => {
   })
 
   it("works with checked and defaultChecked", () => {
-    expect(quickRender(<Toggle checked={false}>Text</Toggle>)).toIncludeJSX(
+    expectJSX(<Toggle checked={false}>Text</Toggle>).toIncludeJSX(
         <input type="checkbox"
                checked={false} 
                defaultChecked={undefined}
                onChange={undefined} />
     )
-    expect(quickRender(<Toggle checked={true}>Text</Toggle>)).toIncludeJSX(
+    expectJSX(<Toggle checked={true}>Text</Toggle>).toIncludeJSX(
         <input type="checkbox"
                checked={true} 
                defaultChecked={undefined}
                onChange={undefined} />
     )
-    expect(quickRender(<Toggle defaultChecked={false}>Text</Toggle>)).toIncludeJSX(
+    expectJSX(<Toggle defaultChecked={false}>Text</Toggle>).toIncludeJSX(
         <input type="checkbox"
                checked={undefined} 
                defaultChecked={false}
                onChange={undefined} />
     )
-    expect(quickRender(<Toggle defaultChecked={true}>Text</Toggle>)).toIncludeJSX(
+    expectJSX(<Toggle defaultChecked={true}>Text</Toggle>).toIncludeJSX(
         <input type="checkbox"
                checked={undefined} 
                defaultChecked={true}
