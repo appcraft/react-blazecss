@@ -5,6 +5,7 @@ import { Example } from './Example'
 
 import { AlertDemo } from './AlertDemo'
 import { BadgeDemo } from './BadgeDemo'
+import { BlockquoteDemo } from './BlockquoteDemo'
 import { ButtonDemo } from './ButtonDemo'
 import { CalendarDemo } from './CalendarDemo'
 import { GridDemo } from './GridDemo'
@@ -98,6 +99,9 @@ class Demo extends React.Component {
           <Section id="badges" onEnter={this.onEnter}>
             <BadgeDemo />
           </Section>
+          <Section id="blockquotes" onEnter={this.onEnter}>
+            <BlockquoteDemo />
+          </Section>
           <Section id="buttons" onEnter={this.onEnter}>
             <ButtonDemo />
           </Section>
@@ -140,6 +144,7 @@ class Demo extends React.Component {
           <UL unstyled className="nav-menu">
             {this.renderLink("alerts", "Alerts")}
             {this.renderLink("badges", "Badges")}
+            {this.renderLink("blockquotes", "Blockquotes")}
             {this.renderLink("buttons", "Buttons")}
             {this.renderLink("calendars", "Calendars")}
             {this.renderLink("grids", "Grids")}

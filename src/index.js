@@ -1,5 +1,6 @@
 export * from './Alert'
 export * from './Badge'
+export * from './Blockquote'
 export * from './Button'
 export * from './Calendar'
 export * from './Grid'

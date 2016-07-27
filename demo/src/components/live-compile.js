@@ -8,6 +8,7 @@ var babel = require('react-live-editor/node_modules/babel-core');
 // variable names.
 const { Alerts, Alert } = require('../../../src/Alert')
 const { Badge } = require('../../../src/Badge')
+const { Blockquote } = require('../../../src/Blockquote')
 const { Button, ButtonGroup } = require('../../../src/Button')
 const { Calendar, CalendarHeaderControl, CalendarDays, CalendarDayLabels } = require('../../../src/Calendar')
 const { Grid, Cell } = require('../../../src/Grid')

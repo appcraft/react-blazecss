@@ -8,6 +8,7 @@ expect.extend(expectJSX);
 
 require('./Alert.unit.js')
 require('./Badge.unit.js')
+require('./Blockquote.unit.js')
 require('./Button.unit.js')
 require('./Grid.unit.js')
 require('./Heading.unit.js')

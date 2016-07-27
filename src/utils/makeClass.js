@@ -7,7 +7,7 @@ export function makeClass(Component, bemName){
       const { children, className, ...props } = this.props
       
       let classNames = bemName
-      if (className) classNames = classNames + " " + className
+      if (className) classNames += " " + className
       
       return <Component {...props} className={classNames}>{children}</Component>
     }
