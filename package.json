@@ -13,6 +13,7 @@
   "scripts": {
     "build": "nwb build",
     "clean": "nwb clean",
+    "dist": "npm run gh-pages && npm publish",
     "gh-pages": "git subtree push --prefix demo/dist origin gh-pages",
     "start": "nwb serve",
     "test": "nwb test",
