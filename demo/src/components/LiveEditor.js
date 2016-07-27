@@ -31,7 +31,8 @@ var ReactPlayground = React.createClass({
   },
 
   render: function() {
-    const {code, showCode, showSideCode=true} = this.state;
+    const {code, showCode} = this.state
+    const {showSideCode=true} = this.props
 
     const showEditor = showCode || showSideCode
 

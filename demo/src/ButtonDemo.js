@@ -31,11 +31,11 @@ export default (
         <ReactPlayground codeText={`\
 export default (
   <ButtonGroup>
-    <Button>Button</Button>
-    <Button bStyle="primary">Button</Button>
-    <Button bStyle="secondary">Button</Button>
-    <Button bStyle="success">Button</Button>
-    <Button bStyle="error">Button</Button>
+    <Button>Default</Button>
+    <Button bStyle="primary">Primary</Button>
+    <Button bStyle="secondary">Secondary</Button>
+    <Button bStyle="success">Success</Button>
+    <Button bStyle="error">Error</Button>
   </ButtonGroup>
 )\
 `} />
@@ -43,11 +43,11 @@ export default (
         <ReactPlayground codeText={`\
 export default (
   <ButtonGroup rounded>
-    <Button>Button</Button>
-    <Button bStyle="primary">Button</Button>
-    <Button bStyle="secondary">Button</Button>
-    <Button bStyle="success">Button</Button>
-    <Button bStyle="error">Button</Button>
+    <Button>Default</Button>
+    <Button bStyle="primary">Primary</Button>
+    <Button bStyle="secondary">Secondary</Button>
+    <Button bStyle="success">Success</Button>
+    <Button bStyle="error">Error</Button>
   </ButtonGroup>
 )\
 `} />
@@ -55,11 +55,11 @@ export default (
         <ReactPlayground codeText={`\
 export default (
   <ButtonGroup size="xsmall" ghost>
-    <Button>Button</Button>
-    <Button bStyle="primary">Button</Button>
-    <Button bStyle="secondary">Button</Button>
-    <Button bStyle="success">Button</Button>
-    <Button bStyle="error">Button</Button>
+    <Button>Default</Button>
+    <Button bStyle="primary">Primary</Button>
+    <Button bStyle="secondary">Secondary</Button>
+    <Button bStyle="success">Success</Button>
+    <Button bStyle="error">Error</Button>
   </ButtonGroup>
 )\
 `} />

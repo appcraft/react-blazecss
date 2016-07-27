@@ -1,6 +1,8 @@
 import React from 'react'
 import {render} from 'react-dom'
 
+import { Example } from './Example'
+
 import { AlertDemo } from './AlertDemo'
 import { BadgeDemo } from './BadgeDemo'
 import { ButtonDemo } from './ButtonDemo'
@@ -77,12 +79,17 @@ class Demo extends React.Component {
       </Nav>
       <div className="o-container o-container--xlarge o-grid o-grid--wrap o-grid--top o-grid--small-full o-grid--medium-full">
         <main className="o-grid__cell o-grid__cell--width-80"  style={{paddingTop: 50}}>
-          <H2 size="large">Introduction</H2>
+          <H1 size="xlarge">Introduction</H1>
           <P>
             ReactBlazeCSS is a set of React components using <a className="c-link" href="http://blazecss.com/">BlazeCSS</a> styles
             and heavily inspired by <a className="c-link" href="https://react-bootstrap.github.io">ReactBoostrap</a>.<br />
             Support is pretty limited and expiramental for now, more components will be added soon.
           </P>
+          <H2 size="large">Useless Example</H2>
+          <Section id="example" onEnter={this.onEnter}>
+            <Example />
+          </Section>
+          <H1 size="xlarge">Components</H1>
           <Section id="alerts" onEnter={this.onEnter}>
             <AlertDemo />
           </Section>
@@ -119,8 +126,12 @@ class Demo extends React.Component {
           <br />
           <br />
         </main>
-        <nav className="o-grid__cell o-grid__cell--width-20 nav fixed@large" style={{paddingTop: 50}}>
-          <H3 size="medium">Components</H3>
+        <nav className="o-grid__cell o-grid__cell--width-20 nav fixed@large" style={{paddingTop: 70}}>
+          <H3 size="medium" style={{padding: ".5em 0"}}>Introduction</H3>
+          <UL unstyled className="nav-menu">
+            {this.renderLink("example", "Example")}
+          </UL>
+          <H3 size="medium" style={{padding: ".5em 0"}}>Components</H3>
           <UL unstyled className="nav-menu">
             {this.renderLink("alerts", "Alerts")}
             {this.renderLink("badges", "Badges")}

@@ -10,8 +10,10 @@ const { Alerts, Alert } = require('../../../src/Alert')
 const { Badge } = require('../../../src/Badge')
 const { Button, ButtonGroup } = require('../../../src/Button')
 const { Calendar, CalendarHeaderControl, CalendarDays, CalendarDayLabels } = require('../../../src/Calendar')
+const { H1, H2, H3, H4, H5, H6 } = require('../../../src/Heading')
 const { UL, OL, LI } = require('../../../src/List')
 const { Nav, NavContent, NavItem } = require('../../../src/Nav')
+const { P } = require('../../../src/P')
 const { Tab, Tabs } = require('../../../src/Tab')
 const { Table, TH, TD, TR, TBody, THead, TCaption } = require('../../../src/Table')
 const { Tags, Tag } = require('../../../src/Tag')
@@ -66,8 +68,8 @@ var ComponentPreview = React.createClass({
 
   compileCode: function compileCode() {
     return babel.transform(this.props.code, { presets: [
-      require('react-live-editor/node_modules/babel-preset-es2015'), 
-      require('react-live-editor/node_modules/babel-preset-react')
+      require('babel-preset-react'),
+      require('babel-preset-es2015') 
   ]
     }).code;
   },
