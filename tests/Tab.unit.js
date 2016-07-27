@@ -4,6 +4,9 @@ import expect from 'expect'
 
 import {Tabs, Tab, TabHeading, TabPane} from '../src/Tab'
 
+import {render, unmountComponentAtNode} from 'react-dom'
+import {scryRenderedDOMComponentsWithClass, renderIntoDocument, Simulate} from 'react-addons-test-utils'
+
 function expectJSX(element){
   let renderer = createRenderer();
   renderer.render(element);
@@ -61,6 +64,32 @@ describe('Tabs', () => {
         <TabPane active={true}>Tab 1 content</TabPane>
       </div>
     )
+  })
+
+  it("can be uncontrolled", () => {
+    var div = document.createElement('div');
+    const node = render(
+      <Tabs defaultActiveKey={1}>
+        <Tab eventKey={1} title="Tab 1">Tab 1 content</Tab>
+        <Tab eventKey={2} title="Tab 2">Tab 2 content</Tab>
+      </Tabs>
+    , div);
+    let tabHeadings = scryRenderedDOMComponentsWithClass(node, "c-tab-heading")
+    let tabPanes = scryRenderedDOMComponentsWithClass(node, "c-tabs__tab")
+    expect(tabHeadings[0].className).toEqual("c-tab-heading c-tab-heading--active")
+    expect(tabHeadings[1].className).toEqual("c-tab-heading")
+    expect(tabPanes[0].className).toEqual("c-tabs__tab c-tabs__tab--active")
+    expect(tabPanes[1].className).toEqual("c-tabs__tab")
+
+    Simulate.click(tabHeadings[1])
+    tabHeadings = scryRenderedDOMComponentsWithClass(node, "c-tab-heading")
+    tabPanes = scryRenderedDOMComponentsWithClass(node, "c-tabs__tab")
+    expect(tabHeadings[0].className).toEqual("c-tab-heading")
+    expect(tabHeadings[1].className).toEqual("c-tab-heading c-tab-heading--active")
+    expect(tabPanes[0].className).toEqual("c-tabs__tab")
+    expect(tabPanes[1].className).toEqual("c-tabs__tab c-tabs__tab--active")
+    
+    unmountComponentAtNode(div)
   })
 })
 
