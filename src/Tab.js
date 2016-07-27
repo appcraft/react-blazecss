@@ -93,8 +93,7 @@ export class Tabs extends React.Component {
   
   renderTabHeadings(){
     const { activeKey=this.state.activeKey, children } = this.props
-    console.log("activeKey", activeKey)
-    
+
     return React.Children.map(children, el => {
       const { title, disabled, eventKey, onSelect=this.onSelect } = el.props
       return <TabHeading disabled={disabled} 
