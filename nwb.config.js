@@ -1,5 +1,8 @@
 module.exports = {
-  type: 'react-component',
+  type: 'react-component',  
+  babel: {
+    optional: ['runtime']
+  },
   build: {
     externals: {
       'react': 'React'
