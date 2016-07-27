@@ -7,6 +7,7 @@ import { AlertDemo } from './AlertDemo'
 import { BadgeDemo } from './BadgeDemo'
 import { ButtonDemo } from './ButtonDemo'
 import { CalendarDemo } from './CalendarDemo'
+import { GridDemo } from './GridDemo'
 import { ListDemo } from './ListDemo'
 import { NavDemo } from './NavDemo'
 import { TabDemo } from './TabDemo'
@@ -79,6 +80,7 @@ class Demo extends React.Component {
       </Nav>
       <div className="o-container o-container--xlarge o-grid o-grid--wrap o-grid--top o-grid--small-full o-grid--medium-full">
         <main className="o-grid__cell o-grid__cell--width-80"  style={{paddingTop: 50}}>
+          
           <H1 size="xlarge">Introduction</H1>
           <P>
             ReactBlazeCSS is a set of React components using <a className="c-link" href="http://blazecss.com/">BlazeCSS</a> styles
@@ -101,6 +103,9 @@ class Demo extends React.Component {
           </Section>
           <Section id="calendars" onEnter={this.onEnter}>
             <CalendarDemo />
+          </Section>
+          <Section id="grids" onEnter={this.onEnter}>
+            <GridDemo />
           </Section>
           <Section id="lists" onEnter={this.onEnter}>
             <ListDemo />
@@ -126,7 +131,7 @@ class Demo extends React.Component {
           <br />
           <br />
         </main>
-        <nav className="o-grid__cell o-grid__cell--width-20 nav fixed@large" style={{paddingTop: 70}}>
+        <nav className="o-grid__cell o-grid__cell--width-20 nav fixed@medium" style={{paddingTop: 70}}>
           <H3 size="medium" style={{padding: ".5em 0"}}>Introduction</H3>
           <UL unstyled className="nav-menu">
             {this.renderLink("example", "Example")}
@@ -137,6 +142,7 @@ class Demo extends React.Component {
             {this.renderLink("badges", "Badges")}
             {this.renderLink("buttons", "Buttons")}
             {this.renderLink("calendars", "Calendars")}
+            {this.renderLink("grids", "Grids")}
             {this.renderLink("lists", "Lists")}
             {this.renderLink("navs", "Navs")}
             {this.renderLink("tables", "Tables")}

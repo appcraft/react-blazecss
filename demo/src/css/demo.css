@@ -24,6 +24,15 @@ code {
   display: inline-block;
 }
 
+.o-grid--demo .o-grid {
+	border: 2px solid #ff69b4;
+}
+
+.o-grid--demo .o-grid__cell {
+	border: 2px solid #00bfff;
+	background-color: #b2f5b5;
+}
+
 .playground {
   position: relative;
   margin-bottom: 32px;
