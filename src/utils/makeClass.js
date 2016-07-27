@@ -6,10 +6,8 @@ export function makeClass(Component, bemName){
     render(){
       const { children, className, ...props } = this.props
       
-      var classNames = bem(bemName, {
-      }, {
-        [className]: true
-      })
+      let classNames = bemName
+      if (className) classNames = classNames + " " + className
       
       return <Component {...props} className={classNames}>{children}</Component>
     }
