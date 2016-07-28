@@ -7,9 +7,7 @@ export class Table extends React.Component {
     
     var classNames = bem("c-table", {
       striped, clickable, condensed
-    }, {
-      [className]: true
-    })
+    }, className)
     
     return <table {...props} className={classNames}>{children}</table>
   }
@@ -21,9 +19,7 @@ export class TR extends React.Component {
     
     var classNames = bem("c-table__row", {
       heading, clickable, inactive
-    }, {
-      [className]: true
-    })
+    }, className)
     
     return <tr {...props} className={classNames}>{children}</tr>
   }
