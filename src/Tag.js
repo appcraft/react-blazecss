@@ -7,7 +7,7 @@ export class Tags extends React.Component {
   render(){
     const { children, className, ...props } = this.props
     
-    var classNames = "c-tags"
+    let classNames = "c-tags"
     if (className) classNames += " " + className
     
     return (

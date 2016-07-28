@@ -7,8 +7,7 @@ export class Container extends React.Component {
     
     let classNames = bem("o-container", {
       [size]: true
-    })
-    if (className) classNames += " " + className
+    }, className)
 
     const Component = componentClass || "div"
     

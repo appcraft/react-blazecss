@@ -10,8 +10,7 @@ export class Grid extends React.Component {
       wrap,
       [verticalAlign]: true,
       "no-gutter": noGutter
-    })
-    if (className) classNames += " " + className
+    }, className)
 
     const Component = componentClass || 'div'
 

@@ -7,8 +7,7 @@ export class Blockquote extends React.Component {
     
     let classNames = bem("c-blockquote", {
       [bStyle]: true
-    })
-    if (className) classNames += " " + className
+    }, className)
     
     return (
       <blockquote {...props} className={classNames}>
