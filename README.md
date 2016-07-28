@@ -10,7 +10,7 @@ React components for BlazeCSS
 [build]: https://travis-ci.org/appcraft/react-blazecss
 
 [npm-badge]: https://img.shields.io/npm/v/react-blazecss.svg?style=flat-square
-[npm]: https://www.npmjs.org/react-blazecss/npm-package
+[npm]: https://www.npmjs.org/package/react-blazecss
 
 [coveralls-badge]: https://img.shields.io/coveralls/appcraft/react-blazecss/master.svg?style=flat-square
 [coveralls]: https://coveralls.io/github/appcraft/react-blazecss
