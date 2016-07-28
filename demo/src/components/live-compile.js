@@ -2,8 +2,8 @@
 
 var React = require("react");
 var ReactDOM = require("react-dom");
-var babel = require('babel-core');
-// var babel = require('react-live-editor/node_modules/babel-core');
+// var babel = require('babel-core');
+var babel = require('react-live-editor/node_modules/babel-core');
 
 // These do not use ES6 imports, because the evaluated code requires un-mangled
 // variable names.
