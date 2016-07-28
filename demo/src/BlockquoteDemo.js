@@ -25,6 +25,18 @@ export default (
   </Blockquote>
 )\
 `} />
+        <H3 size="medium">Colors</H3>
+        <ReactPlayground codeText={`\
+export default (
+  <div>
+    <Blockquote>Default quote</Blockquote>
+    <Blockquote bStyle="primary">Primary quote</Blockquote>
+    <Blockquote bStyle="secondary">Secondary quote</Blockquote>
+    <Blockquote bStyle="success">Success quote</Blockquote>
+    <Blockquote bStyle="error">Error quote</Blockquote>
+  </div>
+)\
+`} />
       </div>
     )
   }

@@ -3,9 +3,11 @@ import { bem }  from './utils'
 
 export class Blockquote extends React.Component {
   render(){
-    const { children, className, cite, ...props } = this.props
+    const { children, bStyle, className, cite, ...props } = this.props
     
-    let classNames = "c-blockquote"
+    let classNames = bem("c-blockquote", {
+      [bStyle]: true
+    })
     if (className) classNames += " " + className
     
     return (

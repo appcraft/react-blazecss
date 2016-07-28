@@ -22,6 +22,16 @@ describe('Blockquote', () => {
     )
   })
 
+  it("works with bStyle", () => {
+    expectJSX(<Blockquote bStyle="success">Text</Blockquote>).toEqualJSX(
+      <blockquote className="c-blockquote c-blockquote--success">
+        <p className="c-blockquote__body">
+          Text
+        </p>
+      </blockquote>
+    )
+  })
+
   it("cites", () => {
     expectJSX(<Blockquote cite="Me">Text</Blockquote>).toEqualJSX(
       <blockquote className="c-blockquote">
