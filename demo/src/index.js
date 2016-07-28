@@ -34,6 +34,22 @@ require('blaze/dist/blaze.min.css')
 require('blaze/dist/blaze.animations.min.css')
 require('./css/demo.css')
 
+class GA extends React.Component {
+  componentDidMount() {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', this.props.id, 'auto');
+    ga('send', 'pageview');
+  }
+
+  render(){
+    return <div />
+  }
+}
+
 
 class Section extends React.Component {
   constructor(props){
@@ -181,18 +197,7 @@ class Demo extends React.Component {
           </Cell>
         </Grid>
       </Container>
-      <div dangerouslySetInnerHTML={{__html: `
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-81527708-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-`}} />
+      <GA id="UA-81527708-1"/>
     </div>
   }
 
