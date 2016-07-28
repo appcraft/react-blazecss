@@ -120,7 +120,7 @@ class Demo extends React.Component {
             <Section id="containers" onEnter={this.onEnter}>
               <ContainerDemo />
             </Section>
-            <Section id="drawer" onEnter={this.onEnter}>
+            <Section id="drawers" onEnter={this.onEnter}>
               <DrawerDemo />
             </Section>
             <Section id="grids" onEnter={this.onEnter}>
@@ -164,6 +164,7 @@ class Demo extends React.Component {
                 {this.renderLink("buttons", "Buttons")}
                 {this.renderLink("calendars", "Calendars")}
                 {this.renderLink("containers", "Containers")}
+                {this.renderLink("drawers", "Drawers")}
                 {this.renderLink("grids", "Grids")}
                 {this.renderLink("lists", "Lists")}
                 {this.renderLink("navs", "Navs")}

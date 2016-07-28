@@ -39,8 +39,11 @@ However, the main goal is for react-blazecss to remain a *simple* wrapper for Bl
 
 - Alerts
 - Badges
+- Blockquotes
 - Buttons
 - Calendars
+- Containers
+- Drawers
 - Grids
 - Headings
 - Lists

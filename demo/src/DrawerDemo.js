@@ -11,7 +11,7 @@ export class DrawerDemo extends React.Component {
         <H2 size="large">Drawers</H2>
         <H3 size="medium">Basic</H3>
         <P>
-          Your basic drawer will appear from the bottom of the container. The container should have overflow:hidden or you'll see the drawer sliding around.
+          Your basic drawer will appear from the bottom of the container. The container should have <code>overflow:hidden</code> or you'll see the drawer sliding around.
         </P>
         <P>
           Change the <code>visible</code> prop to make it appear/disappear
