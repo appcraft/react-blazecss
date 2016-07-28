@@ -3,6 +3,8 @@
 [![Travis][build-badge]][build]
 [![react-blazecss][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/appcraft/react-blazecss/master/LICENSE.md)
+
 
 React components for BlazeCSS
 
