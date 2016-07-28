@@ -13,6 +13,7 @@ import { DrawerDemo } from './DrawerDemo'
 import { GridDemo } from './GridDemo'
 import { ListDemo } from './ListDemo'
 import { NavDemo } from './NavDemo'
+import { PaginationDemo } from './PaginationDemo'
 import { TabDemo } from './TabDemo'
 import { TableDemo } from './TableDemo'
 import { TagDemo } from './TagDemo'
@@ -48,7 +49,6 @@ class GA extends React.Component {
   ga('create', '${id}', 'auto');
   ga('send', 'pageview');
     `;
-    console.log(script)
 
     document.body.appendChild(script);
   }
@@ -159,6 +159,9 @@ class Demo extends React.Component {
             <Section id="navs" onEnter={this.onEnter}>
               <NavDemo />
             </Section>
+            <Section id="pagination" onEnter={this.onEnter}>
+              <PaginationDemo />
+            </Section>
             <Section id="tables" onEnter={this.onEnter}>
               <TableDemo />
             </Section>
@@ -195,6 +198,7 @@ class Demo extends React.Component {
                 {this.renderLink("grids", "Grids")}
                 {this.renderLink("lists", "Lists")}
                 {this.renderLink("navs", "Navs")}
+                {this.renderLink("pagination", "Pagination")}
                 {this.renderLink("tables", "Tables")}
                 {this.renderLink("tabs", "Tabs")}
                 {this.renderLink("tags", "Tags")}

@@ -2,7 +2,20 @@ import React from 'react'
 import { bem, makeClass }  from './utils'
 
 export const Pagination = makeClass("div", "c-pagination")
-export const PaginationEllipsis = makeClass("div", "c-pagination__ellipsis")
+
+export class PaginationEllipsis extends React.Component {
+  render(){
+    const { children, className, ...props } = this.props
+    
+    var classNames = bem("c-pagination__ellipsis", {
+    }, className)
+
+    const child = children || "…"
+    
+    return <span {...props} className={classNames}>{child}</span>
+  }
+}
+
 export const PaginationControl = makeClass("button", "c-pagination__control")
 
 export class PaginationControls extends React.Component {
