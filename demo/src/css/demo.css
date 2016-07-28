@@ -7,6 +7,14 @@ code {
   border-radius: 4px;
 }
 
+.modal-demo {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background-image: url(https://unsplash.it/1024/963?random);
+    background-size: cover;
+}
+
 .nav .c-list__item {
     padding: 0.1em 0;
 }
@@ -18,10 +26,6 @@ code {
 
 .nav-menu>li.c-list__item.active {
   border-left-color: #1690f3;
-}
-
-.c-nav--inline .c-nav__content {
-  display: inline-block;
 }
 
 .o-grid--demo .o-grid {

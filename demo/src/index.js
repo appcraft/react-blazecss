@@ -9,6 +9,7 @@ import { BlockquoteDemo } from './BlockquoteDemo'
 import { ButtonDemo } from './ButtonDemo'
 import { CalendarDemo } from './CalendarDemo'
 import { ContainerDemo } from './ContainerDemo'
+import { DrawerDemo } from './DrawerDemo'
 import { GridDemo } from './GridDemo'
 import { ListDemo } from './ListDemo'
 import { NavDemo } from './NavDemo'
@@ -76,7 +77,7 @@ class Demo extends React.Component {
       selected: ""
     }
     this.onEnter = (selected) => {
-      console.log("onEnter", selected)
+      // console.log("onEnter", selected)
       this.setState({selected})
     }
   }
@@ -90,7 +91,6 @@ class Demo extends React.Component {
       <Container size="large">
         <Grid>
           <Cell componentClass="main" style={{paddingTop: 50}}>
-            
             <H1 size="xlarge">Introduction</H1>
             <P>
               ReactBlazeCSS is a set of React components using <a className="c-link" href="http://blazecss.com/">BlazeCSS</a> styles
@@ -119,6 +119,9 @@ class Demo extends React.Component {
             </Section>
             <Section id="containers" onEnter={this.onEnter}>
               <ContainerDemo />
+            </Section>
+            <Section id="drawer" onEnter={this.onEnter}>
+              <DrawerDemo />
             </Section>
             <Section id="grids" onEnter={this.onEnter}>
               <GridDemo />

@@ -85,9 +85,6 @@ export class CalendarDays extends React.Component {
       buttons.push(<button key={"next-" + (i+1)} className={name}>{padDay(i+1)}</button>)
     }
 
-    console.log("buttons", buttons)
-
-
     return (
       <CalendarContainer>
         {buttons}
