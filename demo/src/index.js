@@ -85,10 +85,12 @@ class Demo extends React.Component {
   render() {
     return <div className="c-text">
       <Nav position="top" fixed inline shadow="higher">
-        <NavContent>ReactBlazeCSS</NavContent>
-        <NavItem right bStyle="primary" href="https://github.com/appcraft/react-blazecss">github</NavItem>
+        <Container size="xlarge">
+          <NavContent>ReactBlazeCSS</NavContent>
+          <NavItem right bStyle="primary" href="https://github.com/appcraft/react-blazecss">github</NavItem>
+        </Container>
       </Nav>
-      <Container size="large">
+      <Container size="xlarge">
         <Grid>
           <Cell componentClass="main" style={{paddingTop: 50}}>
             <H1 size="xlarge">Introduction</H1>
@@ -150,7 +152,7 @@ class Demo extends React.Component {
             <br />
             <br />
           </Cell>
-          <Cell componentClass="nav" fixedWidth={120} className="nav" style={{paddingTop: 70}}>
+          <Cell componentClass="nav" fixedWidth={200} className="nav" style={{paddingTop: 70}}>
             <div className="fixed@large">
               <H3 size="medium" style={{padding: ".5em 0"}}>Introduction</H3>
               <UL unstyled className="nav-menu">

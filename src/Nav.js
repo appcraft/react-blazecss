@@ -3,50 +3,49 @@ import { bem }  from './utils'
 
 export class Nav extends React.Component {
   render(){
-    const { children, inline, shadow, animate, light, position, fixed, ...props } = this.props
+    const { children, className, inline, shadow, animate, light, position, fixed, ...props } = this.props
     
-    var className = bem("c-nav", {
+    let classNames = bem("c-nav", {
       inline, fixed, light,
       [shadow]: true,
       [position]: true,
     }, {
       "a-nav": animate,
-    })
+      "a-nav--slow": animate === "slow",
+      "a-nav--fast": animate === "fast",
+    }, className)
     
-    return <ul {...props} className={className}>{children}</ul>
+    return <div {...props} className={classNames}>{children}</div>
   }
 }
 
 export class NavContent extends React.Component {
   render(){
-    const { children, right, active, centered, bStyle, ...props } = this.props
+    const { children, className, right, centered, ...props } = this.props
     
-    var className = bem("c-nav__content", {
-      right, active,
-      [bStyle]: true,
+    const classNames = bem("c-nav__content", {
+      right,
     }, {
       "u-centered": centered
-    })
+    }, className)
     
-    return <li {...props} className={className}>{children}</li>
+    return <span {...props} className={classNames}>{children}</span>
   }
 }
 
 export class NavItem extends React.Component {
   render(){
-    const { children, right, active, bStyle, href, ...props } = this.props
+    const { children, className, right, active, centered, bStyle, ...props } = this.props
     
-    var className = bem("c-nav__item", {
+    const classNames = bem("c-nav__item", {
       right, active,
       [bStyle]: true,
-    })
+    }, {
+      "u-centered": centered
+    }, className)
 
-    var finalChidren = children
-    
-    if (href){
-      return <a {...props} href={href} className={className}>{finalChidren}</a>
-    }
+    const Component = props.href ? "a" : "span"
 
-    return <li {...props} className={className}>{finalChidren}</li>
+    return <Component {...props} className={classNames}>{children}</Component>
   }
 }

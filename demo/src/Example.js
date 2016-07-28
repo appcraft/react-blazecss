@@ -36,7 +36,7 @@ export default (
       </Cell>
       <Cell md="50" sm="100">
         <H3 size="medium">
-          <Toggle bStyle="primary" style={{float: 'right'}} />
+          <Toggle bStyle="primary" animate style={{float: 'right'}} />
           Notifications
         </H3>
         <Alerts>

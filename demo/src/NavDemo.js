@@ -1,5 +1,5 @@
 import React from 'react'
-import {H2, H3} from '../../src'
+import {H2, H3, P} from '../../src'
 
 import ReactPlayground from './components/LiveEditor'
 
@@ -35,12 +35,14 @@ export default (
 export default (
   <Nav inline shadow="higher" animate>
   {/*<Nav inline shadow="higher" animate position="top" fixed>*/}
+    <NavContent>My APP</NavContent>
     <NavItem bStyle="success" active>Home</NavItem>
     <NavItem>Menu</NavItem>
     <NavItem right bStyle="primary">Settings</NavItem>
   </Nav>
 )\
 `} />
+        <P>Use <code>position="top" fixed</code> to stick the Nav at the top of the screen.</P>
       </div>
     )
   }
