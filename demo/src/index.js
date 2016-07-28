@@ -8,6 +8,7 @@ import { BadgeDemo } from './BadgeDemo'
 import { BlockquoteDemo } from './BlockquoteDemo'
 import { ButtonDemo } from './ButtonDemo'
 import { CalendarDemo } from './CalendarDemo'
+import { ContainerDemo } from './ContainerDemo'
 import { GridDemo } from './GridDemo'
 import { ListDemo } from './ListDemo'
 import { NavDemo } from './NavDemo'
@@ -17,7 +18,14 @@ import { TagDemo } from './TagDemo'
 import { ToggleDemo } from './ToggleDemo'
 import { TreeDemo } from './TreeDemo'
 
-import {H1, H2, H3, H4, H5, H6, UL, LI, P, Button, Nav, NavContent, NavItem} from '../../src'
+import {
+  Container, Grid, Cell,
+  H1, H2, H3, H4, H5, H6, 
+  UL, LI, 
+  P, 
+  Button, 
+  Nav, NavContent, NavItem
+} from '../../src'
 
 import Waypoint from 'react-waypoint'
 
@@ -79,85 +87,93 @@ class Demo extends React.Component {
         <NavContent>ReactBlazeCSS</NavContent>
         <NavItem right bStyle="primary" href="https://github.com/appcraft/react-blazecss">github</NavItem>
       </Nav>
-      <div className="o-container o-container--xlarge o-grid o-grid--wrap o-grid--top o-grid--small-full o-grid--medium-full">
-        <main className="o-grid__cell o-grid__cell--width-80"  style={{paddingTop: 50}}>
-          
-          <H1 size="xlarge">Introduction</H1>
-          <P>
-            ReactBlazeCSS is a set of React components using <a className="c-link" href="http://blazecss.com/">BlazeCSS</a> styles
-            and heavily inspired by <a className="c-link" href="https://react-bootstrap.github.io">ReactBoostrap</a>.<br />
-            Support is pretty limited and expiramental for now, more components will be added soon.
-          </P>
-          <H2 size="large">Useless Example</H2>
-          <Section id="example" onEnter={this.onEnter}>
-            <Example />
-          </Section>
-          <H1 size="xlarge">Components</H1>
-          <Section id="alerts" onEnter={this.onEnter}>
-            <AlertDemo />
-          </Section>
-          <Section id="badges" onEnter={this.onEnter}>
-            <BadgeDemo />
-          </Section>
-          <Section id="blockquotes" onEnter={this.onEnter}>
-            <BlockquoteDemo />
-          </Section>
-          <Section id="buttons" onEnter={this.onEnter}>
-            <ButtonDemo />
-          </Section>
-          <Section id="calendars" onEnter={this.onEnter}>
-            <CalendarDemo />
-          </Section>
-          <Section id="grids" onEnter={this.onEnter}>
-            <GridDemo />
-          </Section>
-          <Section id="lists" onEnter={this.onEnter}>
-            <ListDemo />
-          </Section>
-          <Section id="navs" onEnter={this.onEnter}>
-            <NavDemo />
-          </Section>
-          <Section id="tables" onEnter={this.onEnter}>
-            <TableDemo />
-          </Section>
-          <Section id="tabs" onEnter={this.onEnter}>
-            <TabDemo />
-          </Section>
-          <Section id="tags" onEnter={this.onEnter}>
-            <TagDemo />
-          </Section>
-          <Section id="toggles" onEnter={this.onEnter}>
-            <ToggleDemo />
-          </Section>
-          <Section id="trees" onEnter={this.onEnter}>
-            <TreeDemo />
-          </Section>
-          <br />
-          <br />
-        </main>
-        <nav className="o-grid__cell o-grid__cell--width-20 nav fixed@large" style={{paddingTop: 70}}>
-          <H3 size="medium" style={{padding: ".5em 0"}}>Introduction</H3>
-          <UL unstyled className="nav-menu">
-            {this.renderLink("example", "Example")}
-          </UL>
-          <H3 size="medium" style={{padding: ".5em 0"}}>Components</H3>
-          <UL unstyled className="nav-menu">
-            {this.renderLink("alerts", "Alerts")}
-            {this.renderLink("badges", "Badges")}
-            {this.renderLink("blockquotes", "Blockquotes")}
-            {this.renderLink("buttons", "Buttons")}
-            {this.renderLink("calendars", "Calendars")}
-            {this.renderLink("grids", "Grids")}
-            {this.renderLink("lists", "Lists")}
-            {this.renderLink("navs", "Navs")}
-            {this.renderLink("tables", "Tables")}
-            {this.renderLink("tabs", "Tabs")}
-            {this.renderLink("tags", "Tags")}
-            {this.renderLink("toggles", "Toggles")}
-            {this.renderLink("trees", "Trees")}
-          </UL>
-        </nav>
-      </div>
+      <Container size="large">
+        <Grid>
+          <Cell componentClass="main" style={{paddingTop: 50}}>
+            
+            <H1 size="xlarge">Introduction</H1>
+            <P>
+              ReactBlazeCSS is a set of React components using <a className="c-link" href="http://blazecss.com/">BlazeCSS</a> styles
+              and heavily inspired by <a className="c-link" href="https://react-bootstrap.github.io">ReactBoostrap</a>.<br />
+              Support is pretty limited and expiramental for now, more components will be added soon.
+            </P>
+            <H2 size="large">Useless Example</H2>
+            <Section id="example" onEnter={this.onEnter}>
+              <Example />
+            </Section>
+            <H1 size="xlarge">Components</H1>
+            <Section id="alerts" onEnter={this.onEnter}>
+              <AlertDemo />
+            </Section>
+            <Section id="badges" onEnter={this.onEnter}>
+              <BadgeDemo />
+            </Section>
+            <Section id="blockquotes" onEnter={this.onEnter}>
+              <BlockquoteDemo />
+            </Section>
+            <Section id="buttons" onEnter={this.onEnter}>
+              <ButtonDemo />
+            </Section>
+            <Section id="calendars" onEnter={this.onEnter}>
+              <CalendarDemo />
+            </Section>
+            <Section id="containers" onEnter={this.onEnter}>
+              <ContainerDemo />
+            </Section>
+            <Section id="grids" onEnter={this.onEnter}>
+              <GridDemo />
+            </Section>
+            <Section id="lists" onEnter={this.onEnter}>
+              <ListDemo />
+            </Section>
+            <Section id="navs" onEnter={this.onEnter}>
+              <NavDemo />
+            </Section>
+            <Section id="tables" onEnter={this.onEnter}>
+              <TableDemo />
+            </Section>
+            <Section id="tabs" onEnter={this.onEnter}>
+              <TabDemo />
+            </Section>
+            <Section id="tags" onEnter={this.onEnter}>
+              <TagDemo />
+            </Section>
+            <Section id="toggles" onEnter={this.onEnter}>
+              <ToggleDemo />
+            </Section>
+            <Section id="trees" onEnter={this.onEnter}>
+              <TreeDemo />
+            </Section>
+            <br />
+            <br />
+          </Cell>
+          <Cell componentClass="nav" fixedWidth={120} className="nav" style={{paddingTop: 70}}>
+            <div className="fixed@large">
+              <H3 size="medium" style={{padding: ".5em 0"}}>Introduction</H3>
+              <UL unstyled className="nav-menu">
+                {this.renderLink("example", "Example")}
+              </UL>
+              <H3 size="medium" style={{padding: ".5em 0"}}>Components</H3>
+              <UL unstyled className="nav-menu">
+                {this.renderLink("alerts", "Alerts")}
+                {this.renderLink("badges", "Badges")}
+                {this.renderLink("blockquotes", "Blockquotes")}
+                {this.renderLink("buttons", "Buttons")}
+                {this.renderLink("calendars", "Calendars")}
+                {this.renderLink("containers", "Containers")}
+                {this.renderLink("grids", "Grids")}
+                {this.renderLink("lists", "Lists")}
+                {this.renderLink("navs", "Navs")}
+                {this.renderLink("tables", "Tables")}
+                {this.renderLink("tabs", "Tabs")}
+                {this.renderLink("tags", "Tags")}
+                {this.renderLink("toggles", "Toggles")}
+                {this.renderLink("trees", "Trees")}
+              </UL>
+            </div>
+          </Cell>
+        </Grid>
+      </Container>
     </div>
   }
 

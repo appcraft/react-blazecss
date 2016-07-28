@@ -2,7 +2,8 @@
 
 var React = require("react");
 var ReactDOM = require("react-dom");
-var babel = require('react-live-editor/node_modules/babel-core');
+var babel = require('babel-core');
+// var babel = require('react-live-editor/node_modules/babel-core');
 
 // These do not use ES6 imports, because the evaluated code requires un-mangled
 // variable names.
@@ -11,6 +12,7 @@ const { Badge } = require('../../../src/Badge')
 const { Blockquote } = require('../../../src/Blockquote')
 const { Button, ButtonGroup } = require('../../../src/Button')
 const { Calendar, CalendarHeaderControl, CalendarDays, CalendarDayLabels } = require('../../../src/Calendar')
+const { Container } = require('../../../src/Container')
 const { Grid, Cell } = require('../../../src/Grid')
 const { H1, H2, H3, H4, H5, H6 } = require('../../../src/Heading')
 const { UL, OL, LI } = require('../../../src/List')

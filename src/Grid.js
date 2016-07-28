@@ -25,7 +25,7 @@ export class Grid extends React.Component {
 
 export class Cell extends React.Component {
   render(){
-    const { children, componentClass, width, fixedWidth, offset, verticalAlign, noGutter, className, styles, ...props } = this.props
+    const { children, componentClass, width, fixedWidth, offset, verticalAlign, noGutter, className, styles={}, ...props } = this.props
 
     let classNames = bem("o-grid__cell", {
       [verticalAlign]: true,
@@ -64,10 +64,11 @@ export class Cell extends React.Component {
     let finalStyles = styles
     if (fixedWidth){
       finalStyles = {
-        ...(styles || {}), 
+        ...styles, 
         width: fixedWidth
       }
     }
+
 
     const Component = componentClass || 'div'
 

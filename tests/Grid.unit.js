@@ -56,7 +56,7 @@ describe('Cell', () => {
     expectJSX(
       <Cell>Text</Cell>
     ).toEqualJSX(
-      <div className="o-grid__cell" styles={undefined}>
+      <div className="o-grid__cell" styles={{}}>
         Text
       </div>
     )
@@ -66,7 +66,7 @@ describe('Cell', () => {
     expectJSX(
       <Cell componentClass="nav" className="menu">Text</Cell>
     ).toEqualJSX(
-      <nav className="o-grid__cell menu" styles={undefined}>
+      <nav className="o-grid__cell menu" styles={{}}>
         Text
       </nav>
     )
@@ -78,6 +78,15 @@ describe('Cell', () => {
     ).toEqualJSX(
       <div className="o-grid__cell o-grid__cell--width-fixed" 
            styles={{width: 50}}>
+        Text
+      </div>
+    )
+    // Fixed width with existing styles
+    expectJSX(
+      <Cell fixedWidth={50} styles={{padding: 4}}>Text</Cell>
+    ).toEqualJSX(
+      <div className="o-grid__cell o-grid__cell--width-fixed" 
+           styles={{padding: 4, width: 50}}>
         Text
       </div>
     )
@@ -105,12 +114,12 @@ o-grid__cell--offset-10@super`
     expectJSX(
       <Cell width="50" sp="10" xl="10" lg="25" md="50" sm="75" xs="100"/>
     ).toEqualJSX(
-      <div className={widthClassName} styles={undefined} />
+      <div className={widthClassName} styles={{}} />
     )
     expectJSX(
       <Cell offset="50" spOffset="10" xlOffset="10" lgOffset="25" mdOffset="50" smOffset="75" xsOffset="100"/>
     ).toEqualJSX(
-      <div className={offsetClassName} styles={undefined} />
+      <div className={offsetClassName} styles={{}} />
     )
     expectJSX(
       <Cell width="50" 
@@ -121,7 +130,7 @@ o-grid__cell--offset-10@super`
             smallWidth="75" 
             xsmallWidth="100"/>
     ).toEqualJSX(
-      <div className={widthClassName} styles={undefined} />
+      <div className={widthClassName} styles={{}} />
     )
     expectJSX(
       <Cell offset="50" 
@@ -132,7 +141,7 @@ o-grid__cell--offset-10@super`
             smallOffset="75" 
             xsmallOffset="100"/>
     ).toEqualJSX(
-      <div className={offsetClassName} styles={undefined} />
+      <div className={offsetClassName} styles={{}} />
     )
   })
 })
