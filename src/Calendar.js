@@ -1,15 +1,11 @@
 import React from 'react'
 import { bem }  from './utils'
 
-export class CalendarContainer extends React.Component {
-  render(){
-    return (
-      <div style={{width: '100%', display: 'flex', flexWrap: 'wrap'}}>
-        {this.props.children}
-      </div>
-    )
-  }
-}
+export const CalendarContainer = ({children}) => (
+  <div style={{width: '100%', display: 'flex', flexWrap: 'wrap'}}>
+    {children}
+  </div>
+)
 
 export class CalendarHeaderControl extends React.Component {
 
@@ -30,27 +26,22 @@ export class CalendarHeaderControl extends React.Component {
   }
 
   render(){
-    const { onPrev, onNext, label } = this.props
+    const { onPrev, onNext, children } = this.props
     return (
       <CalendarContainer>
         <button className="c-calendar__control" onClick={this.onPrev}>‹</button>
-        <div className="c-calendar__header">{label}</div>
+        <div className="c-calendar__header">{children}</div>
         <button className="c-calendar__control" onClick={this.onNext}>›</button>
       </CalendarContainer>
     )
   }
 }
 
-export class CalendarDayLabels extends React.Component {
-  render(){
-    const { dayLabels } = this.props
-    return (
-      <CalendarContainer>
-        {dayLabels.map((day, idx) => <div key={idx} className="c-calendar__day">{day}</div>)}
-      </CalendarContainer>
-    )
-  }
-}
+export const CalendarDayLabels = ({dayLabels}) => (
+  <CalendarContainer>
+    {dayLabels.map((day, idx) => <div key={idx} className="c-calendar__day">{day}</div>)}
+  </CalendarContainer>
+)
 
 function padDay(value){
   if (value < 10) return "0" + value
@@ -93,17 +84,13 @@ export class CalendarDays extends React.Component {
   }
 }
 
-export class Calendar extends React.Component {
-  render(){
-    const { shadow, children } = this.props
-
-    const className = bem("c-calendar", {
-      [shadow]: true,
-    })
-    return (
-      <div className={className}>
-        {children}
-      </div>
-    )
-  }
+export const Calendar = ({shadow, children}) => {
+  const className = bem("c-calendar", {
+    [shadow]: true,
+  })
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  )
 }

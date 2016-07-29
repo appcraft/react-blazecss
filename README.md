@@ -49,6 +49,7 @@ However, the main goal is for react-blazecss to remain a *simple* wrapper for Bl
 - Grids
 - Headings
 - Lists
+- Menu
 - Navs
 - Pagination
 - Tables

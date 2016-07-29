@@ -40,6 +40,24 @@ export default (
   </div>
 )\
 `} />
+        <H3 size="medium">Drawer Menu</H3>
+        <P>
+          Drawers and Menus play nicely together
+        </P>
+        <ReactPlayground codeText={`\
+export default (
+  <div className="modal-demo">
+    <Drawer shadow="high" visible>
+      <H4>Drawer header</H4>
+      <Menu>
+      	<MenuItem>Menu 1</MenuItem>
+      	<MenuItem>Menu 2</MenuItem>
+      </Menu>
+      <DrawerBody>Drawer body</DrawerBody>
+    </Drawer>
+  </div>
+)\
+`} />
         <H3 size="medium">Animation</H3>
         <P>
           Animated drawers look even better.

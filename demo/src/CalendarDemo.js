@@ -21,10 +21,11 @@ function setYear(num) {
 export default (
 
   <Calendar shadow="higher">
-    <CalendarHeaderControl label="2016" 
-                           onPrev={() => setYear(2015)} 
-                           onNext={() => setYear(2017)} />
-    <CalendarHeaderControl label="January" />
+    <CalendarHeaderControl onPrev={() => setYear(2015)} 
+                           onNext={() => setYear(2017)}>
+      2016
+    </CalendarHeaderControl>
+    <CalendarHeaderControl>January</CalendarHeaderControl>
     <CalendarDayLabels dayLabels={["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]} />
     <CalendarDays firstDayIndex={5}
                   dayCount={31}
