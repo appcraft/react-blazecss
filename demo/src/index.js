@@ -12,6 +12,7 @@ import { ContainerDemo } from './ContainerDemo'
 import { DrawerDemo } from './DrawerDemo'
 import { GridDemo } from './GridDemo'
 import { ListDemo } from './ListDemo'
+import { MenuDemo } from './MenuDemo'
 import { NavDemo } from './NavDemo'
 import { PaginationDemo } from './PaginationDemo'
 import { TabDemo } from './TabDemo'
@@ -156,6 +157,9 @@ class Demo extends React.Component {
             <Section id="lists" onEnter={this.onEnter}>
               <ListDemo />
             </Section>
+            <Section id="menus" onEnter={this.onEnter}>
+              <MenuDemo />
+            </Section>
             <Section id="navs" onEnter={this.onEnter}>
               <NavDemo />
             </Section>
@@ -182,11 +186,11 @@ class Demo extends React.Component {
           </Cell>
           <Cell componentClass="nav" fixedWidth={200} className="nav" style={{paddingTop: 70}}>
             <div className="fixed@large">
-              <H3 size="medium" style={{padding: ".5em 0"}}>Introduction</H3>
+              <H3 size="small" style={{padding: ".5em 0"}}>Introduction</H3>
               <UL unstyled className="nav-menu">
                 {this.renderLink("example", "Example")}
               </UL>
-              <H3 size="medium" style={{padding: ".5em 0"}}>Components</H3>
+              <H3 size="small" style={{padding: ".5em 0"}}>Components</H3>
               <UL unstyled className="nav-menu">
                 {this.renderLink("alerts", "Alerts")}
                 {this.renderLink("badges", "Badges")}
@@ -197,6 +201,7 @@ class Demo extends React.Component {
                 {this.renderLink("drawers", "Drawers")}
                 {this.renderLink("grids", "Grids")}
                 {this.renderLink("lists", "Lists")}
+                {this.renderLink("menus", "Menus")}
                 {this.renderLink("navs", "Navs")}
                 {this.renderLink("pagination", "Pagination")}
                 {this.renderLink("tables", "Tables")}
