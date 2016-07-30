@@ -11,6 +11,7 @@ import { CalendarDemo } from './CalendarDemo'
 import { ContainerDemo } from './ContainerDemo'
 import { DrawerDemo } from './DrawerDemo'
 import { GridDemo } from './GridDemo'
+import { HeadingDemo } from './HeadingDemo'
 import { ListDemo } from './ListDemo'
 import { MenuDemo } from './MenuDemo'
 import { NavDemo } from './NavDemo'
@@ -154,6 +155,9 @@ class Demo extends React.Component {
             <Section id="grids" onEnter={this.onEnter}>
               <GridDemo />
             </Section>
+            <Section id="headings" onEnter={this.onEnter}>
+              <HeadingDemo />
+            </Section>
             <Section id="lists" onEnter={this.onEnter}>
               <ListDemo />
             </Section>
@@ -200,6 +204,7 @@ class Demo extends React.Component {
                 {this.renderLink("containers", "Containers")}
                 {this.renderLink("drawers", "Drawers")}
                 {this.renderLink("grids", "Grids")}
+                {this.renderLink("headings", "Headings")}
                 {this.renderLink("lists", "Lists")}
                 {this.renderLink("menus", "Menus")}
                 {this.renderLink("navs", "Navs")}
