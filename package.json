@@ -30,7 +30,7 @@
     "expect-jsx": "^2.6.0",
     "nwb": "0.9.x",
     "react": "15.x",
-    "react-addons-shallow-compare": "^15.3.0",
+    "react-addons-shallow-compare": "^15.2.1",
     "react-addons-test-utils": "^15.2.1",
     "react-dom": "15.x",
     "react-live-editor": "^5.2.1",
