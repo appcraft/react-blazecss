@@ -51,6 +51,7 @@ However, the main goal is for react-blazecss to remain a *simple* wrapper for Bl
 - Lists
 - Menu
 - Navs
+- Overlays
 - Pagination
 - Tables
 - Tabs

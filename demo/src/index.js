@@ -16,6 +16,7 @@ import { ListDemo } from './ListDemo'
 import { MenuDemo } from './MenuDemo'
 import { NavDemo } from './NavDemo'
 import { PaginationDemo } from './PaginationDemo'
+import { OverlayDemo } from './OverlayDemo'
 import { TabDemo } from './TabDemo'
 import { TableDemo } from './TableDemo'
 import { TagDemo } from './TagDemo'
@@ -167,6 +168,9 @@ class Demo extends React.Component {
             <Section id="navs" onEnter={this.onEnter}>
               <NavDemo />
             </Section>
+            <Section id="overlays" onEnter={this.onEnter}>
+              <OverlayDemo />
+            </Section>
             <Section id="pagination" onEnter={this.onEnter}>
               <PaginationDemo />
             </Section>
@@ -208,6 +212,7 @@ class Demo extends React.Component {
                 {this.renderLink("lists", "Lists")}
                 {this.renderLink("menus", "Menus")}
                 {this.renderLink("navs", "Navs")}
+                {this.renderLink("overlays", "Overlays")}
                 {this.renderLink("pagination", "Pagination")}
                 {this.renderLink("tables", "Tables")}
                 {this.renderLink("tabs", "Tabs")}
