@@ -20,9 +20,23 @@ describe('DropdownButton', () => {
       </DropdownButton>
     ).toEqualJSX(
       <div style={{position: 'relative'}}>
-        <button type="button" className="c-button">
-          button
-        </button>
+        <Button onClick={() => {}}>
+          button <span className="caret" />
+        </Button>
+      </div>
+    )
+  })
+
+  it("passes props to Button", () => {
+    expectJSX(
+      <DropdownButton label="button" bStyle="primary">
+        <MenuItem>Item 1</MenuItem>
+      </DropdownButton>
+    ).toEqualJSX(
+      <div style={{position: 'relative'}}>
+        <Button bStyle="primary" onClick={() => {}}>
+          button <span className="caret" />
+        </Button>
       </div>
     )
   })
