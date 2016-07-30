@@ -1,36 +1,23 @@
 import React from 'react'
 import { bem }  from './utils'
 
-export class UL extends React.Component {
+export class List extends React.Component {
   render(){
-    const { children, unstyled, inline, className, ...props } = this.props
+    const { children, unstyled, inline, ordered, className, ...props } = this.props
     
     var classNames = bem("c-list", {
-      unstyled, inline
+      unstyled, inline, ordered
     }, {
       [className]: true
     })
+
+    const Component = ordered ? "ol" : "ul"
     
-    return <ul {...props} className={classNames}>{children}</ul>
+    return <Component {...props} className={classNames}>{children}</Component>
   }
 }
 
-export class OL extends React.Component {
-  render(){
-    const { children, unstyled, inline, className, ...props } = this.props
-    
-    var classNames = bem("c-list", {
-      unstyled, inline,
-      ordered: true
-    }, {
-      [className]: true
-    })
-    
-    return <ol {...props} className={classNames}>{children}</ol>
-  }
-}
-
-export class LI extends React.Component {
+export class ListItem extends React.Component {
   render(){
     const { children, unstyled, className, ...props } = this.props
     

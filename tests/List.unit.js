@@ -2,7 +2,7 @@ import React from 'react'
 import {createRenderer} from 'react-addons-test-utils';
 import expect from 'expect'
 
-import {UL, OL, LI} from '../src/List'
+import {List, ListItem} from '../src/List'
 
 function expectJSX(element){
   let renderer = createRenderer();
@@ -10,59 +10,76 @@ function expectJSX(element){
   return expect(renderer.getRenderOutput());
 }
 
-describe('UL', () => {
+describe('List', () => {
 
   it("renders", () => {
-    expectJSX(<UL><LI>Text</LI></UL>).toEqualJSX(
+    expectJSX(
+      <List>
+        <ListItem>Text</ListItem>
+      </List>
+    ).toEqualJSX(
       <ul className="c-list">
-        <LI>Text</LI>
+        <ListItem>Text</ListItem>
       </ul>
     )
   })
 
   it("works with unstyled and inline", () => {
-    expectJSX(<UL unstyled><LI>Text</LI></UL>).toEqualJSX(
+    expectJSX(
+      <List unstyled>
+        <ListItem>Text</ListItem>
+      </List>
+    ).toEqualJSX(
       <ul className="c-list c-list--unstyled">
-        <LI>Text</LI>
+        <ListItem>Text</ListItem>
       </ul>
     )
-    expectJSX(<UL inline><LI>Text</LI></UL>).toEqualJSX(
+    expectJSX(
+      <List inline>
+        <ListItem>Text</ListItem>
+      </List>
+    ).toEqualJSX(
       <ul className="c-list c-list--inline">
-        <LI>Text</LI>
+        <ListItem>Text</ListItem>
       </ul>
+    )
+  })
+
+  it("can be ordered", () => {
+    expectJSX(
+      <List ordered>
+        <ListItem>Text</ListItem>
+      </List>
+    ).toEqualJSX(
+      <ol className="c-list c-list--ordered">
+        <ListItem>Text</ListItem>
+      </ol>
     )
   })
 
   it("works with a custom className", () => {
-    expectJSX(<UL className="custom"><LI>Text</LI></UL>).toEqualJSX(
+    expectJSX(
+      <List className="custom">
+        <ListItem>Text</ListItem>
+      </List>
+    ).toEqualJSX(
       <ul className="c-list custom">
-        <LI>Text</LI>
+        <ListItem>Text</ListItem>
       </ul>
     )
   })
 })
 
-describe('OL', () => {
+describe('ListItem', () => {
 
   it("renders", () => {
-    expectJSX(<OL><LI>Text</LI></OL>).toEqualJSX(
-      <ol className="c-list c-list--ordered">
-        <LI>Text</LI>
-      </ol>
-    )
-  })
-})
-
-describe('LI', () => {
-
-  it("renders", () => {
-    expectJSX(<LI>Text</LI>).toEqualJSX(
+    expectJSX(<ListItem>Text</ListItem>).toEqualJSX(
       <li className="c-list__item">Text</li>
     )
   })
 
   it("works with unstyled", () => {
-    expectJSX(<LI unstyled>Text</LI>).toEqualJSX(
+    expectJSX(<ListItem unstyled>Text</ListItem>).toEqualJSX(
       <li className="c-list__item c-list__item--unstyled">Text</li>
     )
   })

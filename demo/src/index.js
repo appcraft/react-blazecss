@@ -10,6 +10,7 @@ import { ButtonDemo } from './ButtonDemo'
 import { CalendarDemo } from './CalendarDemo'
 import { ContainerDemo } from './ContainerDemo'
 import { DrawerDemo } from './DrawerDemo'
+import { DropdownButtonDemo } from './DropdownButtonDemo'
 import { GridDemo } from './GridDemo'
 import { HeadingDemo } from './HeadingDemo'
 import { ListDemo } from './ListDemo'
@@ -26,7 +27,7 @@ import { TreeDemo } from './TreeDemo'
 import {
   Container, Grid, Cell,
   H1, H2, H3, H4, H5, H6, 
-  UL, LI, 
+  List, ListItem, 
   P, 
   Button, 
   Nav, NavContent, NavItem
@@ -153,6 +154,9 @@ class Demo extends React.Component {
             <Section id="drawers" onEnter={this.onEnter}>
               <DrawerDemo />
             </Section>
+            <Section id="dropdownButtons" onEnter={this.onEnter}>
+              <DropdownButtonDemo />
+            </Section>
             <Section id="grids" onEnter={this.onEnter}>
               <GridDemo />
             </Section>
@@ -195,11 +199,11 @@ class Demo extends React.Component {
           <Cell componentClass="nav" fixedWidth={200} className="nav" style={{paddingTop: 70}}>
             <div className="fixed@large">
               <H3 size="small" style={{padding: ".5em 0"}}>Introduction</H3>
-              <UL unstyled className="nav-menu">
+              <List unstyled className="nav-menu">
                 {this.renderLink("example", "Example")}
-              </UL>
+              </List>
               <H3 size="small" style={{padding: ".5em 0"}}>Components</H3>
-              <UL unstyled className="nav-menu">
+              <List unstyled className="nav-menu">
                 {this.renderLink("alerts", "Alerts")}
                 {this.renderLink("badges", "Badges")}
                 {this.renderLink("blockquotes", "Blockquotes")}
@@ -207,6 +211,7 @@ class Demo extends React.Component {
                 {this.renderLink("calendars", "Calendars")}
                 {this.renderLink("containers", "Containers")}
                 {this.renderLink("drawers", "Drawers")}
+                {this.renderLink("dropdownButtons", "DropdownButton")}
                 {this.renderLink("grids", "Grids")}
                 {this.renderLink("headings", "Headings")}
                 {this.renderLink("lists", "Lists")}
@@ -219,7 +224,7 @@ class Demo extends React.Component {
                 {this.renderLink("tags", "Tags")}
                 {this.renderLink("toggles", "Toggles")}
                 {this.renderLink("trees", "Trees")}
-              </UL>
+              </List>
             </div>
           </Cell>
         </Grid>
@@ -232,13 +237,13 @@ class Demo extends React.Component {
     const active = id == this.state.selected
     // Force selection in 50ms, used because trusting waypoints leaving doesn't work well on scroll jumps
     return (
-      <LI className={active ? "active" : undefined}>
+      <ListItem className={active ? "active" : undefined}>
         <a className="c-link" 
            href={"#" + id} 
            onClick={() => setTimeout(() => this.setState({selected: id}), 50)}>
           {name}
         </a>
-      </LI>
+      </ListItem>
     )
   }
 }
