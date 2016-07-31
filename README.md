@@ -5,7 +5,6 @@
 [![Coveralls][coveralls-badge]][coveralls]
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/appcraft/react-blazecss/master/LICENSE.md)
 
-
 React components for BlazeCSS
 
 [build-badge]: https://img.shields.io/travis/appcraft/react-blazecss/master.svg?style=flat-square
@@ -26,6 +25,48 @@ Please visit the [demo/documentation website](https://appcraft.github.io/react-b
 `npm install react-blazecss --save`
 
 Please note that this is an early and experimental release. Most components should work perfectly fine but the API might change over time.
+
+Note that ReactBlazeCSS doesn't include any CSS by default, so you'll have to manually add BlazeCSS. This is done so that you can use custom builds or themes if required.
+
+Add the following to your `<head></head>` :
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/blazecss/latest/blaze.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/blazecss/latest/blaze.animations.min.css">
+```
+
+or just `npm install blaze` and :
+```javascript
+require('blaze/dist/blaze.min.css')
+require('blaze/dist/blaze.animations.min.css')
+```
+
+## Usage
+
+All of the components are directly exposed by `react-blazecss`. 
+```javascript
+import { Drawer, Menu, MenuItem, H4 } from 'react-blazecss'
+```
+
+and use 
+
+```javascript
+<Drawer shadow="high" visible>
+  <H4>Drawer header</H4>
+  <Menu>
+    <MenuItem>Menu 1</MenuItem>
+    <MenuItem>Menu 2</MenuItem>
+  </Menu>
+  <DrawerBody>Drawer body</DrawerBody>
+</Drawer>
+```
+
+If you don't want to include all of ReactBlazeCSS, you can also do selective imports :
+
+```javascript
+import { Drawer } from 'react-blazecss/Drawer'
+import { Menu, MenuItem } from 'react-blazecss/Menu'
+import { H4 } from 'react-blazecss/Heading'
+```
 
 ## Why ?
 
@@ -64,7 +105,7 @@ However, the main goal is for react-blazecss to remain a *simple* wrapper for Bl
 
 The following code was used to render the previous screenshot.
 
-```
+```javascript
 <div>
   <Nav inline>
     <NavContent centered>My APP</NavContent>

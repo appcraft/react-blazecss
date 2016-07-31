@@ -61,7 +61,7 @@ export class DropdownButton extends React.Component {
                 onClick={this.handleToggle}>
           {label} <span className="caret" />
         </Button>
-        {open && <Overlay dismissable fullpage transparent onClick={this.handleToggle} />}
+        {open && <Overlay style={{cursor: 'initial'}} fullpage transparent onClick={this.handleToggle} />}
         {open && <DropdownMenu handleToggle={this.handleToggle}>{children}</DropdownMenu>}
       </div>
     )

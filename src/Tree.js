@@ -63,9 +63,7 @@ export class DataTreeItem extends React.Component {
 
     this.onToggle = (e) => {
       const { data } = this.props
-      console.log('onToggle', data)
       if (data.children && data.children.length > 0){
-        console.log("!this.state.expanded", !this.state.expanded)
         this.setState({
           expanded : !this.state.expanded
         })
