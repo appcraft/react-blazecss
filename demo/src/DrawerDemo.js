@@ -58,6 +58,31 @@ export default (
   </div>
 )\
 `} />
+        <H3 size="medium">DrawerFooter</H3>
+        <P>
+          Add a footer to your drawer to have block buttons
+        </P>
+        <ReactPlayground codeText={`\
+export default (
+  <div className="modal-demo">
+    <Drawer shadow="high" visible>
+      <H4>Drawer header</H4>
+      <Menu>
+      	<MenuItem>Menu 1</MenuItem>
+      	<MenuItem>Menu 2</MenuItem>
+      </Menu>
+      <DrawerBody>
+        Drawer body<br />
+        <Button bStyle="primary" block>Body button</Button>
+      </DrawerBody>
+      <DrawerFooter block>
+      	<Button bStyle="success">Save</Button>
+      	<Button bStyle="error">Delete</Button>
+      </DrawerFooter>
+    </Drawer>
+  </div>
+)\
+`} />
         <H3 size="medium">Animation</H3>
         <P>
           Animated drawers look even better.

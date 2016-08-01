@@ -2,7 +2,7 @@ import React from 'react'
 import {createRenderer} from 'react-addons-test-utils';
 import expect from 'expect'
 
-import { Drawer } from '../src/Drawer'
+import { Drawer, DrawerFooter } from '../src/Drawer'
 
 function expectJSX(element){
   let renderer = createRenderer();
@@ -36,6 +36,18 @@ describe('Drawer', () => {
   it("works with animate", () => {
     expectJSX(<Drawer animate="slow">text</Drawer>).toEqualJSX(
       <div className="c-drawer c-drawer--bottom a-drawer a-drawer--slow">text</div>
+    )
+  })
+})
+
+describe('DrawerFooter', () => {
+
+  it("renders", () => {
+    expectJSX(<DrawerFooter>text</DrawerFooter>).toEqualJSX(
+      <div className="c-drawer__footer">text</div>
+    )
+    expectJSX(<DrawerFooter block>text</DrawerFooter>).toEqualJSX(
+      <div className="c-drawer__footer c-drawer__footer--block">text</div>
     )
   })
 })

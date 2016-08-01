@@ -20,3 +20,11 @@ export class Drawer extends React.Component {
 }
 
 export const DrawerBody = makeClass("div", "c-drawer__body")
+
+export const DrawerFooter = ({ children, className, block, ...props }) => {
+  const classNames = bem("c-drawer__footer", {
+    block
+  }, className)
+  
+  return <div {...props} className={classNames}>{children}</div>
+}

@@ -12,8 +12,9 @@ const { Badge } = require('../../../src/Badge')
 const { Blockquote } = require('../../../src/Blockquote')
 const { Button, ButtonGroup } = require('../../../src/Button')
 const { Calendar, CalendarHeaderControl, CalendarDays, CalendarDayLabels } = require('../../../src/Calendar')
+const { Card, CardContent, CardItem, CardGroupDivider } = require('../../../src/Card')
 const { Container } = require('../../../src/Container')
-const { Drawer, DrawerBody } = require('../../../src/Drawer')
+const { Drawer, DrawerBody, DrawerFooter } = require('../../../src/Drawer')
 const { DropdownButton } = require('../../../src/DropdownButton')
 const { Grid, Cell } = require('../../../src/Grid')
 const { H1, H2, H3, H4, H5, H6 } = require('../../../src/Heading')
@@ -95,7 +96,10 @@ var ComponentPreview = React.createClass({
       ReactDOM.render(eval(compiledCode), mountNode);
     } catch (err) {
       this.setTimeout(function () {
-        ReactDOM.render(React.createElement("div", { className: "playgroundError" }, err.toString()), mountNode);
+        ReactDOM.render(
+          <div className="playgroundError">
+            {err.toString()}
+          </div>, mountNode);
       }, 500);
     }
   }

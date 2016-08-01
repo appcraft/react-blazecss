@@ -9,6 +9,7 @@ export class PaginationDemo extends React.Component {
     return (
       <div>
         <H2 size="large">Pagination</H2>
+        <P>Current page : 4, later buttons are disabled</P>
         <ReactPlayground codeText={`\
 export default (
   <Pagination>
@@ -20,12 +21,12 @@ export default (
     	<PaginationEllipsis />
     	<PaginationPage>3</PaginationPage>
     	<PaginationPage current>4</PaginationPage>
-    	<PaginationPage>5</PaginationPage>
+    	<PaginationPage disabled>5</PaginationPage>
     	<PaginationEllipsis />
     </PaginationControls>
   	<PaginationControls forward>
-    	<PaginationControl>›</PaginationControl>
-    	<PaginationControl>»</PaginationControl>
+    	<PaginationControl disabled>›</PaginationControl>
+    	<PaginationControl disabled>»</PaginationControl>
     </PaginationControls>
   </Pagination>
 )\

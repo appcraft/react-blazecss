@@ -8,6 +8,7 @@ import { BadgeDemo } from './BadgeDemo'
 import { BlockquoteDemo } from './BlockquoteDemo'
 import { ButtonDemo } from './ButtonDemo'
 import { CalendarDemo } from './CalendarDemo'
+import { CardDemo } from './CardDemo'
 import { ContainerDemo } from './ContainerDemo'
 import { DrawerDemo } from './DrawerDemo'
 import { DropdownButtonDemo } from './DropdownButtonDemo'
@@ -148,6 +149,9 @@ class Demo extends React.Component {
             <Section id="calendars" onEnter={this.onEnter}>
               <CalendarDemo />
             </Section>
+            <Section id="cards" onEnter={this.onEnter}>
+              <CardDemo />
+            </Section>
             <Section id="containers" onEnter={this.onEnter}>
               <ContainerDemo />
             </Section>
@@ -209,6 +213,7 @@ class Demo extends React.Component {
                 {this.renderLink("blockquotes", "Blockquotes")}
                 {this.renderLink("buttons", "Buttons")}
                 {this.renderLink("calendars", "Calendars")}
+                {this.renderLink("cards", "Cards")}
                 {this.renderLink("containers", "Containers")}
                 {this.renderLink("drawers", "Drawers")}
                 {this.renderLink("dropdownButtons", "DropdownButton")}
