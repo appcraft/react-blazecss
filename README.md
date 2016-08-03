@@ -90,8 +90,9 @@ However, the main goal is for react-blazecss to remain a *simple* wrapper for Bl
 - DropdownButtons (WIP)
 - Grids
 - Headings
+- Images
 - Lists
-- Menu
+- Menus
 - Navs
 - Overlays
 - Pagination

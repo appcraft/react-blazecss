@@ -2,8 +2,8 @@
 
 var React = require("react");
 var ReactDOM = require("react-dom");
-// var babel = require('babel-core');
-var babel = require('react-live-editor/node_modules/babel-core');
+var babel = require('babel-core');
+// var babel = require('react-live-editor/node_modules/babel-core');
 
 // These do not use ES6 imports, because the evaluated code requires un-mangled
 // variable names.
@@ -18,6 +18,7 @@ const { Drawer, DrawerBody, DrawerFooter } = require('../../../src/Drawer')
 const { DropdownButton } = require('../../../src/DropdownButton')
 const { Grid, Cell } = require('../../../src/Grid')
 const { H1, H2, H3, H4, H5, H6 } = require('../../../src/Heading')
+const { Image } = require('../../../src/Image')
 const { List, ListItem } = require('../../../src/List')
 const { Menu, MenuItem, MenuGroupDivider } = require('../../../src/Menu')
 const { Nav, NavContent, NavItem } = require('../../../src/Nav')

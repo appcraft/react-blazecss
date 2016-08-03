@@ -14,6 +14,7 @@ import { DrawerDemo } from './DrawerDemo'
 import { DropdownButtonDemo } from './DropdownButtonDemo'
 import { GridDemo } from './GridDemo'
 import { HeadingDemo } from './HeadingDemo'
+import { ImageDemo } from './ImageDemo'
 import { ListDemo } from './ListDemo'
 import { MenuDemo } from './MenuDemo'
 import { NavDemo } from './NavDemo'
@@ -167,6 +168,9 @@ class Demo extends React.Component {
             <Section id="headings" onEnter={this.onEnter}>
               <HeadingDemo />
             </Section>
+            <Section id="images" onEnter={this.onEnter}>
+              <ImageDemo />
+            </Section>
             <Section id="lists" onEnter={this.onEnter}>
               <ListDemo />
             </Section>
@@ -219,6 +223,7 @@ class Demo extends React.Component {
                 {this.renderLink("dropdownButtons", "DropdownButton")}
                 {this.renderLink("grids", "Grids")}
                 {this.renderLink("headings", "Headings")}
+                {this.renderLink("images", "Images")}
                 {this.renderLink("lists", "Lists")}
                 {this.renderLink("menus", "Menus")}
                 {this.renderLink("navs", "Navs")}
