@@ -1,6 +1,6 @@
 {
   "name": "react-blazecss",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "React components for BlazeCSS",
   "main": "lib/index.js",
   "jsnext:main": "es6/index.js",

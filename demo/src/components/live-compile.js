@@ -10,6 +10,7 @@ var babel = require('babel-core');
 const { Alerts, Alert } = require('../../../src/Alert')
 const { Badge } = require('../../../src/Badge')
 const { Blockquote } = require('../../../src/Blockquote')
+const { Bubble } = require('../../../src/Bubble')
 const { Button, ButtonGroup } = require('../../../src/Button')
 const { Calendar, CalendarHeaderControl, CalendarDays, CalendarDayLabels } = require('../../../src/Calendar')
 const { Card, CardContent, CardItem, CardGroupDivider } = require('../../../src/Card')
