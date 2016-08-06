@@ -3,14 +3,14 @@ import { bem }  from './utils'
 
 export class Tree extends React.Component {
   render(){
-    const { animate, data, children } = this.props
-    const className = bem("c-tree", {}, {
+    const { animate, children, className, ...props } = this.props
+    const classNames = bem("c-tree", {}, {
       "a-tree": animate,
       "a-tree--slow": animate === "slow",
       "a-tree--fast": animate === "fast",
-    })
+    }, className)
     return (
-      <ul className={className}>
+      <ul {...props} className={classNames}>
         {children}
       </ul>
     )
@@ -19,23 +19,23 @@ export class Tree extends React.Component {
 
 export class TreeItem extends React.Component {
   render(){
-    const { expandable, expanded, label, quiet, onClick, children } = this.props
+    const { expandable, expanded, label, quiet, className, children, onClick, ...props } = this.props
 
-    const classname = bem("c-tree__item", {
+    const classNames = bem("c-tree__item", {
       expandable: expandable && !expanded,
       expanded
     }, {
       "c-text--quiet": quiet
-    })
+    }, className)
     if (expandable || expanded){
       return (
-        <li className={classname}><span className="c-link" onClick={onClick}>{label}</span>
+        <li {...props} className={classNames}><span className="c-link" onClick={onClick}>{label}</span>
           {children}
         </li>
       )
     } else {
       return (
-        <li className={classname} onClick={onClick}>{label}</li>
+        <li {...props} className={classNames} onClick={onClick}>{label}</li>
       )
     }
   }
@@ -43,10 +43,10 @@ export class TreeItem extends React.Component {
 
 export class DataTree extends React.Component {
   render(){
-    const { animate, data=[] } = this.props
+    const { data=[], ...treeProps } = this.props
     return (
-      <Tree>
-        {data.map((el, idx) => <DataTreeItem key={idx} data={el} />)}
+      <Tree {...treeProps}>
+        {data.map((el, idx) => <DataTreeItem key={idx} data={el} treeProps={treeProps} />)}
       </Tree>
     )
   }
@@ -72,7 +72,7 @@ export class DataTreeItem extends React.Component {
   }
 
   render(){
-    const { data } = this.props
+    const { data, treeProps } = this.props
     const { expanded } = this.state
     const children = data.children || []
     return (
@@ -80,7 +80,7 @@ export class DataTreeItem extends React.Component {
                 expandable={children.length > 0}
                 onClick={this.onToggle}
                 label={data.label}>
-        {children.length > 0 && <DataTree data={expanded ? children : []} />}
+        {children.length > 0 && <DataTree {...treeProps} data={expanded ? children : []} />}
       </TreeItem>
     )
   }
