@@ -53,6 +53,19 @@ export default (
     <CardContent divider>Footer</CardContent>
   </Card>
 )\
+`} />    
+        <H3 size="medium">Example</H3>
+        <P>Here's a classic example with a title, image, and contents</P>
+        <ReactPlayground codeText={`\
+export default (
+  <Card bStyle="primary" shadow="higher">
+    <CardContent divider>Title</CardContent>
+    <Image src="https://unsplash.it/1024/500?random" />
+    <CardContent>
+      <P>Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</P>
+    </CardContent>
+  </Card>
+)\
 `} />       
         <H3 size="medium">Card Items</H3>
         <P>Cards can contains CardItems (menu style)</P>
