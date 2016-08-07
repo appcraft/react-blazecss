@@ -38,6 +38,14 @@ export default (
   </div>
 )\
 `} />
+        <H3 size="medium">SubHeading</H3>
+        <ReactPlayground codeText={`\
+export default (
+  <div>
+    <H2 size="medium">Title <SubHeading>Subtitle</SubHeading></H2>
+  </div>
+)\
+`} />
       </div>
     )
   }

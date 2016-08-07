@@ -1,5 +1,5 @@
 import React from 'react'
-import {H2, H3, P} from '../../src'
+import {H2, H3, H4, P} from '../../src'
 
 import ReactPlayground from './components/LiveEditor'
 import { PropsTable, Props } from './components/PropsTable'
@@ -54,8 +54,9 @@ export default (
   </Card>
 )\
 `} />    
-        <H3 size="medium">Example</H3>
-        <P>Here's a classic example with a title, image, and contents</P>
+        <H3 size="medium">Examples</H3>
+        <H4 size="small">Image Card</H4>
+        <P>Classic example with a title, image, and contents</P>
         <ReactPlayground codeText={`\
 export default (
   <Card bStyle="primary" shadow="higher">
@@ -63,6 +64,24 @@ export default (
     <Image src="https://unsplash.it/1024/500?random" />
     <CardContent>
       <P>Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</P>
+    </CardContent>
+  </Card>
+)\
+`} />     
+        <H4 size="small">Media Element</H4>
+        <ReactPlayground codeText={`\
+export default (
+  <Card bStyle="primary" shadow="higher">
+    <CardContent>
+      <Grid noGutter>
+        <Cell fixedWidth={96}>
+          <Image src="https://unsplash.it/128/128?random" />
+          </Cell>
+          <Cell style={{paddingLeft: 16}}>
+            <H3 size="small" style={{paddingTop: 0}}>Title <SubHeading style={{paddingTop: 0}}>@author</SubHeading></H3>
+          <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut.</P>
+          </Cell>
+      </Grid>
     </CardContent>
   </Card>
 )\

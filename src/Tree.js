@@ -46,7 +46,7 @@ export class DataTree extends React.Component {
     const { data=[], ...treeProps } = this.props
     return (
       <Tree {...treeProps}>
-        {data.map((el, idx) => <DataTreeItem key={idx} data={el} treeProps={treeProps} />)}
+        {data.map((el, idx) => <DataTreeItem key={el.key || idx} data={el} treeProps={treeProps} />)}
       </Tree>
     )
   }

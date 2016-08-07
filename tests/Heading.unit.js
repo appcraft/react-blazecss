@@ -2,7 +2,7 @@ import React from 'react'
 import {createRenderer} from 'react-addons-test-utils';
 import expect from 'expect'
 
-import {H1, H2, H3} from '../src/Heading'
+import {H1, H2, H3, SubHeading} from '../src/Heading'
 
 function expectJSX(element){
   let renderer = createRenderer();
@@ -27,6 +27,18 @@ describe('Heading', () => {
   it("works with extra className", () => {
     expectJSX(<H1 className="custom">Text</H1>).toEqualJSX(
       <h1 className="c-heading c-heading--super custom">Text</h1>
+    )
+  })
+})
+
+describe('SubHeading', () => {
+
+  it("renders", () => {
+    expectJSX(<SubHeading>sub</SubHeading>).toEqualJSX(
+      <span className="c-heading c-heading__sub">sub</span>
+    )
+    expectJSX(<SubHeading className="custom">sub</SubHeading>).toEqualJSX(
+      <span className="c-heading c-heading__sub custom">sub</span>
     )
   })
 })
