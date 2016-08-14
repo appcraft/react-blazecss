@@ -1,4 +1,4 @@
-# react-blazecss
+# React BlazeCSS
 
 [![Travis][build-badge]][build]
 [![react-blazecss][npm-badge]][npm]
@@ -148,4 +148,6 @@ The following code was used to render the previous screenshot.
 
 ## License
 
-MIT
+Licensed under the MIT license
+
+Made with ♥ by [@GregoryPotdevin](https://twitter.com/GregoryPotdevin) at [AppCraft](http://www.appcraft.fr/)
