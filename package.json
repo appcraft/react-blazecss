@@ -1,12 +1,12 @@
 {
   "name": "react-blazecss",
-  "version": "0.3.6",
+  "version": "0.4.0",
   "description": "React components for BlazeCSS",
   "main": "lib/index.js",
-  "jsnext:main": "es6/index.js",
+  "jsnext:main": "es/index.js",
   "files": [
     "css",
-    "es6",
+    "es",
     "lib",
     "umd"
   ],
@@ -25,10 +25,10 @@
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
-    "blaze": "^2.12.0",
+    "blaze": "^2.13.0",
     "classnames": "^2.2.5",
     "expect-jsx": "^2.6.0",
-    "nwb": "0.9.x",
+    "nwb": "^0.12.0",
     "react": "^15.2.1",
     "react-addons-shallow-compare": "^15.2.1",
     "react-addons-test-utils": "^15.2.1",

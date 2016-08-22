@@ -1,15 +1,11 @@
 module.exports = {
   type: 'react-component',  
   babel: {
-    optional: ['runtime']
+    runtime: 'helpers'
   },
-  build: {
-    externals: {
-      'react': 'React'
-    },
-    global: 'ReactBlazeCSS',
-    jsNext: true,
-    umd: true
+  npm: { 
+    esModules: true,
+    umd: 'ReactBlazeCSS'
   },
   webpack: {
     extra: {
