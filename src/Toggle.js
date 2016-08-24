@@ -3,7 +3,7 @@ import { bem }  from './utils'
 
 export class Toggle extends React.Component {
   render(){
-    const { checked, bStyle, animate, onChange, defaultChecked, children, right, ...props } = this.props
+    const { id, checked, bStyle, animate, onChange, defaultChecked, children, right, ...props } = this.props
     const name = "c-toggle"
 
     const toggleComponent = (
@@ -17,7 +17,8 @@ export class Toggle extends React.Component {
         "a-toggle--slow": animate === "slow",
         "a-toggle--fast": animate === "fast",
       })}>
-        <input type="checkbox" 
+        <input type="checkbox"
+               id={id} 
                checked={checked} 
                defaultChecked={defaultChecked}
                onChange={onChange} />
