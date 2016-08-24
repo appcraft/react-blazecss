@@ -23,7 +23,8 @@ export default (
     <Button bStyle="error">Error</Button>{" "}
     <Button bStyle="error" rounded ghost>Rounded Ghost Error</Button>{" "}
     <Button href="#buttons">Link</Button>{" "}
-    <Button disabled>Disabled</Button>
+    <Button disabled>Disabled</Button>{" "}
+    <Button componentClass="span">span</Button>
   </div>
 )\
 `} />
