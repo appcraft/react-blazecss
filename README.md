@@ -86,6 +86,7 @@ However, the main goal is for react-blazecss to remain a *simple* wrapper for Bl
 - Bubbles
 - Buttons
 - Calendars
+- Cards
 - Containers
 - Drawers
 - DropdownButtons (WIP)
@@ -94,6 +95,7 @@ However, the main goal is for react-blazecss to remain a *simple* wrapper for Bl
 - Images
 - Lists
 - Menus
+- Modals
 - Navs
 - Overlays
 - Pagination
